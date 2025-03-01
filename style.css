@@ -150,7 +150,7 @@ li {
         url("images/banner.jpg") center/cover no-repeat;
     color: var(--color-white);
     text-align: center;
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
