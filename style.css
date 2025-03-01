@@ -64,10 +64,10 @@ body {
 /* HERO SECTION */
 /* ---------------------------------------------------------- */
 .hero {
-    /* 
-       Make sure you have the 'bubble-nebula.jpg' (or your actual file name) 
-       in your images folder. 
-     */
+    /*
+       Make sure you have the 'banner.jpg' in your images folder.
+       You can adjust the overlay opacity by changing the rgba values below.
+    */
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("images/banner.jpg") center/cover no-repeat;
