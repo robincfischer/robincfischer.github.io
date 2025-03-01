@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Robin Fischer – Academic Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <!-- HEADER & NAVBAR -->
     <header class="site-header">
         <nav class="navbar">
             <div class="logo">
@@ -22,52 +23,68 @@
         </nav>
     </header>
 
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hello, I’m Robin Fischer</h1>
+            <p>PhD Researcher, IDEaS | Energy Systems &amp; Complex Dynamics</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
     <main>
         <!-- ABOUT SECTION -->
         <section id="about" class="about-section">
             <h2>About Me</h2>
             <div class="about-content">
-                <!-- Profile Picture -->
-                <img class="profile-photo" src="images/profile.png" alt="Portrait of Robin Fischer">
+                <!-- IMAGE COLUMN -->
+                <div class="image-section">
+                    <img class="profile-photo" src="images/profile.png" alt="Portrait of Robin Fischer" />
+                </div>
                 
-                <p>
-                    I am a PhD researcher at IDEaS, where I apply forecasting and control methods to enhance energy system models, 
-                    with a particular focus on innovation and technological change. My research lies at the intersection of 
-                    energy economics, complex systems, and statistical modeling, aiming to understand the dynamics of 
-                    technological transitions in the energy sector. I am advised by Prof. Kavita Surana.
-                </p>
+                <!-- TEXT COLUMN -->
+                <div class="text-section">
+                    <p>
+                        I am a PhD researcher at IDEaS, where I apply forecasting and control methods to enhance 
+                        energy system models, with a particular focus on innovation and technological change. 
+                        My research lies at the intersection of energy economics, complex systems, and statistical 
+                        modeling, aiming to understand the dynamics of technological transitions in the energy sector. 
+                        I am advised by Prof. Kavita Surana.
+                    </p>
 
-                <h3>Research Interests</h3>
-                <p>
-                    My research explores the interplay between technological change, uncertainty, and policy 
-                    incentives in energy transitions. Specifically, I work on:
-                </p>
-                <ul>
-                    <li>
-                        <strong>Energy System Forecasting: Leveraging Bayesian inference and machine learning to analyze 
-                            and predict the evolution of firm portfolio dynamics in changing energy markets.
-                    </li>
-                    <li>
-                        <strong>Technological Change & Innovation:</strong> Studying Wright’s Law and experience 
-                        curves to assess the evolution of renewable energy costs and diffusion patterns.
-                    </li>
-                    <li>
-                        <strong>Complex Systems in Energy Economics:</strong> Using agent-based modeling (ABM) 
-                        and network analysis to explore the nonlinear dynamics of energy transitions.
-                    </li>
-                    <li>
-                        <strong>Econometrics & Economic History:</strong> Investigating the historical role 
-                        of policy interventions, market incentives, and technological lock-ins in shaping the 
-                        energy landscape.
-                    </li>
-                </ul>
+                    <h3>Research Interests</h3>
+                    <p>
+                        My research explores the interplay between technological change, uncertainty, and policy 
+                        incentives in energy transitions. Specifically, I work on:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Energy System Forecasting:</strong> Leveraging Bayesian inference and machine learning 
+                            to analyze and predict the evolution of firm portfolio dynamics in changing energy markets.
+                        </li>
+                        <li>
+                            <strong>Technological Change &amp; Innovation:</strong> Studying Wright’s Law and experience 
+                            curves to assess the evolution of renewable energy costs and diffusion patterns.
+                        </li>
+                        <li>
+                            <strong>Complex Systems in Energy Economics:</strong> Using agent-based modeling (ABM) 
+                            and network analysis to explore the nonlinear dynamics of energy transitions.
+                        </li>
+                        <li>
+                            <strong>Econometrics &amp; Economic History:</strong> Investigating the historical role of 
+                            policy interventions, market incentives, and technological lock-ins in shaping the 
+                            energy landscape.
+                        </li>
+                    </ul>
 
-                <h3>Brief Bio</h3>
-                <p>
-                    I hold a MSc in Economics and a Bsc in Mathematics and Philosophy. My research 
-                    integrates quantitative techniques from econometrics, complexity science, and control theory 
-                    to better understand the economic and technological forces driving the energy transition.
-                </p>
+                    <h3>Brief Bio</h3>
+                    <p>
+                        I hold a MSc in Economics and a BSc in Mathematics and Philosophy. My research integrates 
+                        quantitative techniques from econometrics, complexity science, and control theory to better 
+                        understand the economic and technological forces driving the energy transition.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -78,8 +95,17 @@
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2025 Robin Fischer</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Robin Fischer</p>
+            <div class="social-links">
+                <!-- Replace # with your actual social/profile links -->
+                <a href="#" target="_blank">Twitter</a> |
+                <a href="#" target="_blank">GitHub</a> |
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
