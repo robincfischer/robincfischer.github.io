@@ -112,24 +112,17 @@ body {
     align-items: center;
 }
 
-.banner-photo {
-    position: absolute;
-    bottom: -60px;
-    width: 140px;
-    height: auto;
-    border-radius: var(--border-radius-base);
-    border: var(--border-base);
-    box-shadow: var(--box-shadow-base);
-}
-
-.hero h1 {
-    font-size: var(--font-size-xl);
-    margin-bottom: var(--spacing-md);
-}
-
-.hero h2 {
-    font-size: var(--font-size-md);
-    font-weight: 300;
+/* Adjust image size and position */
+.profile-photo {
+    width: 150px; /* Set to a professional size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: var(--border-radius-base); /* Optional: keep existing border-radius styles */
+    border: var(--border-base); /* Optional: keep existing border styles */
+    box-shadow: var(--box-shadow-base); /* Optional: keep existing box-shadow styles */
+    position: absolute; /* Position it in front of the banner */
+    bottom: -50px; /* Adjust as needed to position it correctly */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
 }
 
 /* ---------------------------------------------------------- */
