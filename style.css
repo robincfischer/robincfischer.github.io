@@ -1,106 +1,76 @@
-/* Import a LaTeX-style font (Alternative: EB Garamond) */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap');
+/* Import LaTeX-style font */
+@font-face {
+    font-family: 'Computer Modern';
+    src: url('https://cdn.jsdelivr.net/npm/cmu-serif@0.7.0/cmun-serif.woff2') format('woff2');
+}
 
+/* General Styles */
 body {
-    font-family: 'EB Garamond', serif;
-    font-size: 18px;
-    background-color: #f8f8f8;
+    font-family: 'Computer Modern', serif;
+    background-color: #f5f5f5;
     color: #333;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
-/* NAVIGATION BAR */
+/* Navbar */
 .navbar {
-    background-color: #00274d; /* Dark Blue */
-    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #00274d;
+    padding: 15px 20px;
 }
 
-.logo a {
-    font-size: 24px;
-    font-weight: bold;
+.navbar .logo a {
     color: white;
+    font-size: 22px;
     text-decoration: none;
 }
 
 .nav-links {
     list-style: none;
-    padding: 0;
     display: flex;
     gap: 15px;
 }
 
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
+.nav-links li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 18px;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
     text-decoration: underline;
 }
 
-/* HEADER SECTION */
-.site-header {
+/* About Section */
+.about-section {
     text-align: center;
-    background: #f0f0f0;
-    padding: 50px 20px;
-    border-bottom: 3px solid #00274d; /* Dark Blue */
-}
-
-.hero h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #00274d; /* Dark Blue */
-}
-
-/* CONTENT SECTIONS */
-main {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* SECTION HEADINGS */
-h2 {
-    color: #00274d; /* Dark Blue */
-    border-bottom: 2px solid #00274d;
-    padding-bottom: 5px;
-}
-
-/* ABOUT SECTION */
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    padding: 40px;
+    background-color: white;
 }
 
 .profile-photo {
     width: 150px;
+    height: auto;
     border-radius: 50%;
-    border: 3px solid #00274d; /* Dark Blue */
+    border: 3px solid #00274d;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
 
-/* FOOTER */
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #e6e6e6;
+}
+
+/* Footer */
 .site-footer {
     text-align: center;
+    padding: 10px;
     background-color: #00274d;
     color: white;
-    padding: 15px 0;
-    margin-top: 40px;
-}
-
-.site-footer p {
-    margin: 0;
 }
