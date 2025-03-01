@@ -249,3 +249,16 @@ li {
     padding: var(--spacing-md);
     text-align: center;
 }
+
+/* ---------------------------------------------------------- */
+/* TEACHING PAGE CONTAINER */
+/* ---------------------------------------------------------- */
+.teaching-container {
+    max-width: 850px;                /* Control how wide the content gets */
+    margin: 120px auto 40px auto;    /* Centered on the page; extra top margin for fixed navbar */
+    padding: var(--spacing-lg);
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-base);
+    border-left: 6px solid var(--color-accent);
+    text-align: left;
+}
