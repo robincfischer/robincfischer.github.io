@@ -9,6 +9,7 @@
     --color-accent-light: rgba(0, 39, 77, 0.9);
     --color-white: #fff;
     --color-grey: #e6e6e6;
+    --color-yellow: #FFD700; /* Goldgelb für "Learn More" */
 
     --font-size-base: 18px;
     --font-size-lg: 24px;
@@ -41,9 +42,9 @@ body {
     font-family: var(--font-primary);
     background-color: var(--color-bg);
     color: var(--color-text);
-    line-height: 1.8; /* Improved readability */
-    font-size: 20px; /* Slightly larger text */
-    letter-spacing: 0.5px; /* Subtle spacing for clarity */
+    line-height: 1.8;
+    font-size: 20px;
+    letter-spacing: 0.5px;
 }
 
 /* Headings */
@@ -69,8 +70,8 @@ h3 {
 p {
     font-size: var(--font-size-base);
     margin-bottom: var(--spacing-base);
-    max-width: 750px; /* Limit width for better reading experience */
-    text-align: justify; /* Professional alignment */
+    max-width: 750px;
+    text-align: justify;
 }
 
 /* Links */
@@ -94,7 +95,6 @@ ul, ol {
 li {
     margin-bottom: var(--spacing-sm);
 }
-
 
 /* ---------------------------------------------------------- */
 /* NAVBAR */
@@ -157,23 +157,39 @@ li {
     align-items: center;
 }
 
-/* Adjust image size and position */
+/* Profilbild oben rechts in der Hero Section */
 .profile-photo {
-    width: 140px; /* Set to a professional size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: var(--border-radius-base); /* Optional: keep existing border-radius styles */
-    border: var(--border-base); /* Optional: keep existing border styles */
-    box-shadow: var(--box-shadow-base); /* Optional: keep existing box-shadow styles */
-    
-    /* Positioning in the top-right corner */
+    width: 140px;
+    height: auto;
+    border-radius: var(--border-radius-base);
+    border: var(--border-base);
+    box-shadow: var(--box-shadow-base);
+
     position: absolute;
-    top: 265px; /* Adjust distance from the top */
-    left: 0px; /* Adjust distance from the right */
-    z-index: 1001; /* Ensure it appears above other elements */
+    top: 250px; /* Abstand von oben */
+    right: 20px; /* Abstand von rechts */
+    z-index: 1001;
 }
 
+/* "Hi, I am Robin" in Weiß */
+.hero h1 {
+    color: var(--color-white);
+}
 
-/.about-section {
+/* "Learn More" in Gelb */
+.hero a {
+    color: var(--color-yellow);
+    font-weight: bold;
+}
+
+.hero a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------------- */
+/* ABOUT SECTION */
+/* ---------------------------------------------------------- */
+.about-section {
     max-width: 850px;
     margin: 80px auto;
     padding: var(--spacing-lg);
@@ -202,7 +218,9 @@ li {
     text-align: justify;
 }
 
-
+/* ---------------------------------------------------------- */
+/* CONTACT SECTION */
+/* ---------------------------------------------------------- */
 .contact-section {
     text-align: center;
     padding: var(--spacing-lg) var(--spacing-base);
@@ -220,7 +238,6 @@ li {
     max-width: 600px;
     margin: 0 auto;
 }
-
 
 /* ---------------------------------------------------------- */
 /* FOOTER */
