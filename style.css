@@ -166,8 +166,8 @@ li {
     box-shadow: var(--box-shadow-base);
 
     position: absolute;
-    top: 210px; /* Abstand von oben */
-    left: 20px; /* Abstand von rechts */
+    top: 190px; /* Abstand von oben */
+    left: 15px; /* Abstand von rechts */
     z-index: 1001;
 }
 
