@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------- */
-/* FONT (Computer Modern for a LaTeX-like look) */
+/* FONT (LaTeX-style: Computer Modern) */
 /* ---------------------------------------------------------- */
 @font-face {
     font-family: 'Computer Modern';
@@ -20,16 +20,18 @@ body {
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
+    font-size: 18px;  /* Increased font size for better readability */
 }
 
 /* ---------------------------------------------------------- */
 /* NAVBAR */
 /* ---------------------------------------------------------- */
 .site-header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
+    background-color: rgba(0, 39, 77, 0.9); /* Dark blue, slightly transparent */
     z-index: 1000;
-    background-color: #00274d;
     padding: 10px 0;
 }
 
@@ -66,35 +68,36 @@ body {
 }
 
 /* ---------------------------------------------------------- */
-/* HERO SECTION (BANNER WITH PROFILE PICTURE) */
+/* HERO SECTION (BANNER WITH OVERLAY + PROFILE PICTURE) */
 /* ---------------------------------------------------------- */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    position: relative;
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("images/banner.jpg") center/cover no-repeat;
     color: white;
-    padding: 80px 20px;
-    height: 350px;
+    text-align: center;
+    height: 400px; /* Adjusted height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Profile picture inside the banner */
+/* Profile picture placed over the banner */
 .banner-photo {
-    width: 150px; /* Adjust size */
+    position: absolute;
+    bottom: -60px; /* Adjust to place it in front of the banner */
+    width: 140px; /* Adjust size */
     height: auto;
-    border-radius: 0; /* Keep it rectangular */
-    border: 3px solid white; /* White border */
+    border-radius: 5px; /* Keep it rectangular but slightly rounded */
+    border: 4px solid white; /* White border */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 15px; /* Space between image and text */
 }
 
 .hero h1 {
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 40px; /* Larger font */
+    margin-bottom: 10px;
 }
 
 .hero h2 {
@@ -107,38 +110,30 @@ body {
 /* ---------------------------------------------------------- */
 .about-section {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 100px auto 40px auto; /* Adjust margin to avoid overlap */
     padding: 20px;
     background-color: white;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #002b5c; /* Dark blue accent */
+    text-align: center;
 }
 
 .about-section h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 26px;
 }
 
+/* Center content */
 .about-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    text-align: center;
 }
 
-/* Profile picture in the About section */
-.profile-photo {
-    width: 200px;
-    height: auto;
-    border-radius: 0; /* No circular shape */
-    border: 2px solid #002b5c;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.text-section {
-    flex: 1;
-    min-width: 300px;
-    text-align: left;
+.about-content p {
+    max-width: 80%;
 }
 
 /* ---------------------------------------------------------- */
@@ -152,6 +147,7 @@ body {
 
 .contact-section h2 {
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .contact-section p {
