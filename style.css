@@ -1,0 +1,59 @@
+body {
+    font-family: 'Computer Modern', serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.6;
+    background: #fdfdfd;
+    color: #333;
+}
+
+@font-face {
+    font-family: 'Computer Modern';
+    src: url('https://cdn.jsdelivr.net/npm/cmu-serif@0.7.0/cmun-serif.woff2') format('woff2');
+}
+
+.site-header {
+    text-align: center;
+    padding: 20px;
+    background: #003366;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.content-section {
+    padding: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #003366;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 10px;
+    background: #003366;
+    color: white;
+    margin-top: 20px;
+}
