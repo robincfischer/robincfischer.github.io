@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------- */
-/* FONT */
+/* FONT (Computer Modern for a LaTeX-like look) */
 /* ---------------------------------------------------------- */
 @font-face {
     font-family: 'Computer Modern';
@@ -19,6 +19,7 @@ body {
     font-family: 'Computer Modern', serif;
     background-color: #f5f5f5;
     color: #333;
+    line-height: 1.6;
 }
 
 /* ---------------------------------------------------------- */
@@ -28,26 +29,30 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: #00274d;
+    padding: 10px 0;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #00274d;
-    padding: 15px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo a {
     color: white;
-    font-size: 22px;
+    font-size: 24px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .nav-links li a {
@@ -61,95 +66,79 @@ body {
 }
 
 /* ---------------------------------------------------------- */
-/* HERO SECTION */
+/* HERO SECTION (BANNER WITH PROFILE PICTURE) */
 /* ---------------------------------------------------------- */
 .hero {
-    /*
-       Make sure you have the 'banner.jpg' in your images folder.
-       You can adjust the overlay opacity by changing the rgba values below.
-    */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("images/banner.jpg") center/cover no-repeat;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
+    color: white;
+    padding: 80px 20px;
+    height: 350px;
 }
 
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+/* Profile picture inside the banner */
+.banner-photo {
+    width: 150px; /* Adjust size */
+    height: auto;
+    border-radius: 0; /* Keep it rectangular */
+    border: 3px solid white; /* White border */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px; /* Space between image and text */
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.btn {
-    background-color: #ffcc00;
-    color: #00274d;
-    padding: 10px 20px;
-    text-decoration: none;
+    font-size: 36px;
     font-weight: bold;
-    border-radius: 5px;
 }
 
-.btn:hover {
-    background-color: #ffc733;
+.hero h2 {
+    font-size: 20px;
+    font-weight: 300;
 }
 
 /* ---------------------------------------------------------- */
 /* ABOUT SECTION */
 /* ---------------------------------------------------------- */
 .about-section {
-    padding: 40px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
     background-color: white;
-    max-width: 1000px;
-    margin: 0 auto; /* center the section */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #002b5c; /* Dark blue accent */
 }
 
 .about-section h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
 }
 
-.image-section {
-    flex: 0 0 250px;
-    text-align: center;
-}
-
+/* Profile picture in the About section */
 .profile-photo {
     width: 200px;
     height: auto;
-    border-radius: 50%;
-    border: 3px solid #00274d;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0; /* No circular shape */
+    border: 2px solid #002b5c;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .text-section {
     flex: 1;
     min-width: 300px;
-}
-
-.text-section p,
-.text-section ul,
-.text-section li,
-.text-section h3 {
     text-align: left;
-    margin-bottom: 1em;
 }
 
 /* ---------------------------------------------------------- */
@@ -165,6 +154,10 @@ body {
     margin-bottom: 20px;
 }
 
+.contact-section p {
+    font-size: 18px;
+}
+
 /* ---------------------------------------------------------- */
 /* FOOTER */
 /* ---------------------------------------------------------- */
@@ -172,26 +165,5 @@ body {
     background-color: #00274d;
     color: white;
     padding: 15px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.footer-content p {
-    margin: 0;
-}
-
-.social-links a {
-    color: #ffcc00;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
+    text-align: center;
 }
