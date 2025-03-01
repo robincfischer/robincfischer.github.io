@@ -1,19 +1,35 @@
-/* Import LaTeX-style font */
+/* ---------------------------------------------------------- */
+/* FONT */
+/* ---------------------------------------------------------- */
 @font-face {
     font-family: 'Computer Modern';
     src: url('https://cdn.jsdelivr.net/npm/cmu-serif@0.7.0/cmun-serif.woff2') format('woff2');
 }
 
-/* General Styles */
+/* ---------------------------------------------------------- */
+/* BASIC STYLES */
+/* ---------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Computer Modern', serif;
     background-color: #f5f5f5;
     color: #333;
-    margin: 0;
-    padding: 0;
 }
 
-/* Navbar */
+/* ---------------------------------------------------------- */
+/* NAVBAR */
+/* ---------------------------------------------------------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -22,7 +38,7 @@ body {
     padding: 15px 20px;
 }
 
-.navbar .logo a {
+.logo a {
     color: white;
     font-size: 22px;
     text-decoration: none;
@@ -44,33 +60,138 @@ body {
     text-decoration: underline;
 }
 
-/* About Section */
-.about-section {
+/* ---------------------------------------------------------- */
+/* HERO SECTION */
+/* ---------------------------------------------------------- */
+.hero {
+    /* 
+       Make sure you have the 'bubble-nebula.jpg' (or your actual file name) 
+       in your images folder. 
+     */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("images/bubble-nebula.jpg") center/cover no-repeat;
+    color: #fff;
     text-align: center;
-    padding: 40px;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #ffcc00;
+    color: #00274d;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #ffc733;
+}
+
+/* ---------------------------------------------------------- */
+/* ABOUT SECTION */
+/* ---------------------------------------------------------- */
+.about-section {
+    padding: 40px 20px;
     background-color: white;
+    max-width: 1000px;
+    margin: 0 auto; /* center the section */
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.image-section {
+    flex: 0 0 250px;
+    text-align: center;
 }
 
 .profile-photo {
-    width: 150px;
+    width: 200px;
     height: auto;
     border-radius: 50%;
     border: 3px solid #00274d;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
 }
 
-/* Contact Section */
+.text-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.text-section p,
+.text-section ul,
+.text-section li,
+.text-section h3 {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+/* ---------------------------------------------------------- */
+/* CONTACT SECTION */
+/* ---------------------------------------------------------- */
 .contact-section {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     background-color: #e6e6e6;
 }
 
-/* Footer */
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------- */
+/* FOOTER */
+/* ---------------------------------------------------------- */
 .site-footer {
-    text-align: center;
-    padding: 10px;
     background-color: #00274d;
     color: white;
+    padding: 15px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.social-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
 }
