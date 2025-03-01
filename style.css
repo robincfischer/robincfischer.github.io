@@ -35,21 +35,66 @@
 }
 
 /* ---------------------------------------------------------- */
-/* BASIC STYLES */
+/* IMPROVED TEXT STYLES */
 /* ---------------------------------------------------------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: var(--font-primary);
     background-color: var(--color-bg);
     color: var(--color-text);
-    line-height: 1.6;
-    font-size: var(--font-size-base);
+    line-height: 1.8; /* Improved readability */
+    font-size: 20px; /* Slightly larger text */
+    letter-spacing: 0.5px; /* Subtle spacing for clarity */
 }
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+h1 {
+    font-size: var(--font-size-xl);
+}
+
+h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+h3 {
+    font-size: var(--font-size-md);
+}
+
+/* Paragraphs */
+p {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-base);
+    max-width: 750px; /* Limit width for better reading experience */
+    text-align: justify; /* Professional alignment */
+}
+
+/* Links */
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: var(--spacing-lg);
+    padding-left: var(--spacing-base);
+    line-height: 1.7;
+}
+
+li {
+    margin-bottom: var(--spacing-sm);
+}
+
 
 /* ---------------------------------------------------------- */
 /* NAVBAR */
@@ -114,7 +159,7 @@ body {
 
 /* Adjust image size and position */
 .profile-photo {
-    width: 200px; /* Set to a professional size */
+    width: 140px; /* Set to a professional size */
     height: auto; /* Maintain aspect ratio */
     border-radius: var(--border-radius-base); /* Optional: keep existing border-radius styles */
     border: var(--border-base); /* Optional: keep existing border styles */
@@ -122,59 +167,60 @@ body {
     
     /* Positioning in the top-right corner */
     position: absolute;
-    top: 30px; /* Adjust distance from the top */
-    right: 40px; /* Adjust distance from the right */
+    top: 265px; /* Adjust distance from the top */
+    left: 0px; /* Adjust distance from the right */
     z-index: 1001; /* Ensure it appears above other elements */
 }
 
 
-/* ---------------------------------------------------------- */
-/* ABOUT SECTION */
-/* ---------------------------------------------------------- */
-.about-section {
-    max-width: 900px;
-    margin: 100px auto 40px auto;
-    padding: var(--spacing-base);
+/.about-section {
+    max-width: 850px;
+    margin: 80px auto;
+    padding: var(--spacing-lg);
     background-color: var(--color-white);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid var(--color-accent);
-    text-align: center;
-}
-
-.about-section h2 {
-    text-align: center;
-    margin-bottom: var(--spacing-base);
-    font-size: var(--font-size-sm);
+    box-shadow: var(--box-shadow-base);
+    border-left: 6px solid var(--color-accent);
+    text-align: left;
 }
 
 .about-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
+    gap: var(--spacing-lg);
+}
+
+.about-content img {
+    max-width: 180px;
+    height: auto;
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--box-shadow-base);
 }
 
 .about-content p {
     max-width: 80%;
+    font-size: 19px;
+    text-align: justify;
 }
 
-/* ---------------------------------------------------------- */
-/* CONTACT SECTION */
-/* ---------------------------------------------------------- */
+
 .contact-section {
     text-align: center;
     padding: var(--spacing-lg) var(--spacing-base);
     background-color: var(--color-grey);
+    border-top: 4px solid var(--color-accent);
 }
 
 .contact-section h2 {
-    margin-bottom: var(--spacing-base);
     font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 .contact-section p {
-    font-size: var(--font-size-base);
+    font-size: 19px;
+    max-width: 600px;
+    margin: 0 auto;
 }
+
 
 /* ---------------------------------------------------------- */
 /* FOOTER */
