@@ -114,16 +114,19 @@ body {
 
 /* Adjust image size and position */
 .profile-photo {
-    width: 150px; /* Set to a professional size */
+    width: 200px; /* Set to a professional size */
     height: auto; /* Maintain aspect ratio */
     border-radius: var(--border-radius-base); /* Optional: keep existing border-radius styles */
     border: var(--border-base); /* Optional: keep existing border styles */
     box-shadow: var(--box-shadow-base); /* Optional: keep existing box-shadow styles */
-    position: absolute; /* Position it in front of the banner */
-    bottom: -50px; /* Adjust as needed to position it correctly */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Center it horizontally */
+    
+    /* Positioning in the top-right corner */
+    position: absolute;
+    top: 20px; /* Adjust distance from the top */
+    right: 40px; /* Adjust distance from the right */
+    z-index: 1001; /* Ensure it appears above other elements */
 }
+
 
 /* ---------------------------------------------------------- */
 /* ABOUT SECTION */
