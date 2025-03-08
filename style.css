@@ -272,4 +272,14 @@ li {
     box-shadow: var(--box-shadow-base);
     border-left: 6px solid var(--color-accent);
     text-align: left;
+} 
+
+.CV-container {
+    max-width: 850px;
+    margin: 120px auto 40px auto;
+    padding: var(--spacing-lg);
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-base);
+    border-left: 6px solid var(--color-accent);
+    text-align: left;
 }
