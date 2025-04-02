@@ -163,7 +163,6 @@ li {
     width: 200px;
     height: auto;
     border: none;
-    box-shadow: 0 0 12px rgba(210, 153, 34, 0.15); /* sanftes goldenes Leuchten */
     border-radius: var(--border-radius-base);
     position: absolute;
     top: 190px;
