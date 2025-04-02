@@ -11,9 +11,9 @@
     --color-accent: #4d90fe;
     --color-accent-light: rgba(77, 144, 254, 0.08);
     --color-white: #ffffff;
-    --color-grey: #2a2a2a;
+    --color-grey: #2d2d2d;
     --color-yellow: #FFD700;
-    --color-border-image: #666666; /* neue Umrandungsfarbe fürs Bild */
+    --color-border-image: #d29922; /* neue Umrandungsfarbe fürs Bild */
 
     --font-size-base: 18px;
     --font-size-lg: 24px;
