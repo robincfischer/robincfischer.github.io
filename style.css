@@ -149,7 +149,7 @@ li {
     position: relative;
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("images/banner.jpg") center/cover no-repeat;
+        url("images/roa_background_fancy.png") center/cover no-repeat;
     color: var(--color-white);
     text-align: center;
     height: 450px;
