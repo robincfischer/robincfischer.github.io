@@ -162,9 +162,9 @@ li {
 .profile-photo {
     width: 200px;
     height: auto;
+    border: none;
+    box-shadow: 0 0 12px rgba(210, 153, 34, 0.15); /* sanftes goldenes Leuchten */
     border-radius: var(--border-radius-base);
-    border: 4px solid var(--color-border-image);
-    box-shadow: var(--box-shadow-base);
     position: absolute;
     top: 190px;
     left: 15px;
