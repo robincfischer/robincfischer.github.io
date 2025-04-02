@@ -162,15 +162,14 @@ li {
 .profile-photo {
     width: 200px;
     height: auto;
-    border-radius: 5px; /* oder 5px für eckig */
-    border: 1px solid rgba(210, 153, 34, 0.5); /* Akzentfarbe */
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
-    filter: brightness(1.0) contrast(1.0); /* Leichte Optimierung */
+    border-radius: 5px; /* Behalte eckige Form oder 50% für rund */
+    border: 1px solid rgba(200, 200, 200, 0.4); /* Grau mit Transparenz */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 190px;
     left: 13px;
     z-index: 1001;
-    transition: all 0.3s ease;
+    filter: brightness(1.0) contrast(1.0); /* Minimale Farboptimierung */
 }
 
 
