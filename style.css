@@ -162,13 +162,15 @@ li {
 .profile-photo {
     width: 200px;
     height: auto;
-    border: 1px solid var(--color-border-image);
     border-radius: var(--border-radius-base);
+    border: 1px solid #000; /* glasklare schwarze Linie */
+    box-shadow: none;
     position: absolute;
     top: 190px;
     left: 15px;
     z-index: 1001;
 }
+
 
 .hero h1 {
     color: var(--color-white);
