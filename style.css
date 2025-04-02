@@ -2,7 +2,7 @@
 /* VARIABLES — CLEAN DARK THEME INSPIRED BY CHATGPT */
 /* ---------------------------------------------------------- */
 :root {
-    --font-primary: 'Computer Modern', serif;
+    --font-primary: 'Courier New', Courier, monospace; /* Retro */;
     --font-heading: 'Inter', sans-serif;
 
     --color-bg: #1e1e1e;
