@@ -193,7 +193,7 @@ li {
     padding: var(--spacing-lg);
     background-color: var(--color-grey);
     box-shadow: var(--box-shadow-base);
-    border-left: 6px solid var(--color-accent);
+    border-left: 4px solid #3c3c3c;
     text-align: left;
     border-radius: var(--border-radius-base);
 }
