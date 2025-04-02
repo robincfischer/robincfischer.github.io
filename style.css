@@ -13,7 +13,7 @@
     --color-white: #ffffff;
     --color-grey: #2a2a2a;
     --color-yellow: #FFD700;
-    --color-border-image: #1a1a1a;
+    --color-border-image: #000000;
 
     --font-size-base: 18px;
     --font-size-lg: 24px;
@@ -162,7 +162,7 @@ li {
 .profile-photo {
     width: 200px;
     height: auto;
-    border: none;
+    border: 1px solid var(--color-border-image);
     border-radius: var(--border-radius-base);
     position: absolute;
     top: 190px;
