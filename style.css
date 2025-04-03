@@ -32,7 +32,7 @@
 }
 
 @font-face {
-    font-family: 'Computer Modern';
+    font-family: 'Courier New', monospace';
     src: url('https://cdn.jsdelivr.net/npm/cmu-serif@0.7.0/cmun-serif.woff2') format('woff2');
 }
 
