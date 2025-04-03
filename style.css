@@ -235,6 +235,17 @@ li::marker {
   text-align: justify;
 }
 
+.terminal-heading {
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  font-size: 1.3em;
+  color: var(--color-heading); /* or var(--color-text) for subtlety */
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.5px;
+}
+
+
 .terminal-label {
   font-family: 'Courier New', monospace;
   font-weight: 500;
