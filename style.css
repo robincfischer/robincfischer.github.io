@@ -1,8 +1,8 @@
- /* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
 /* VARIABLES — CLEAN DARK THEME INSPIRED BY CHATGPT */
 /* ---------------------------------------------------------- */
 :root {
-    --font-primary: 'Roboto', sans-serif;
+    --font-primary: 'Roboto', sans-serif; 
     --font-heading: 'Inter', sans-serif;
 
     --color-bg: #1e1e1e;
@@ -34,6 +34,11 @@
 @font-face {
     font-family: 'Computer Modern';
     src: url('https://cdn.jsdelivr.net/npm/cmu-serif@0.7.0/cmun-serif.woff2') format('woff2');
+}
+
+body, p, li {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 body {
@@ -93,13 +98,17 @@ a:hover {
 }
 
 ul, ol {
-    margin-left: var(--spacing-lg);
-    padding-left: var(--spacing-base);
-    line-height: 1.7;
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: justify;
 }
 
 li {
     margin-bottom: var(--spacing-sm);
+    padding-left: 1em;
+    text-indent: -1em;
+    text-align: justify;
 }
 
 .site-header {
@@ -172,8 +181,6 @@ li {
     filter: brightness(1.0) contrast(1.0); /* Minimale Farboptimierung */
 }
 
-
-
 .hero h1 {
     color: var(--color-white);
 }
@@ -214,10 +221,12 @@ li {
     box-shadow: var(--box-shadow-base);
 }
 
-.about-content p {
-    max-width: 80%;
-    font-size: 19px;
+.about-content p,
+.about-content ul,
+.about-content li {
+    max-width: 100%;
     text-align: justify;
+    text-justify: inter-word;
 }
 
 .contact-section {
