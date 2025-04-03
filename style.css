@@ -46,7 +46,7 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.8;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.3px;
     margin: 0;
 }
