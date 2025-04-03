@@ -2,7 +2,7 @@
 /* VARIABLES — CLEAN DARK THEME INSPIRED BY CHATGPT */
 /* ---------------------------------------------------------- */
 :root {
-    --font-primary: 'Roboto', sans-serif; 
+    --font-primary: 'Inter', sans-serif;
     --font-heading: 'Inter', sans-serif;
 
     --color-bg: #1e1e1e;
@@ -98,17 +98,20 @@ a:hover {
 }
 
 ul, ol {
-    list-style-position: inside;
+    list-style-position: outside;
+    margin-left: 1.2em;
     padding-left: 0;
-    margin-left: 0;
     text-align: justify;
 }
 
 li {
     margin-bottom: var(--spacing-sm);
-    padding-left: 1em;
-    text-indent: -1em;
+    text-indent: 0;
     text-align: justify;
+}
+
+li::marker {
+    color: var(--color-accent);
 }
 
 .site-header {
