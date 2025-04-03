@@ -224,6 +224,23 @@ li::marker {
     box-shadow: var(--box-shadow-base);
 }
 
+.terminal-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: var(--spacing-base);
+}
+
+.terminal-list li {
+  margin-bottom: var(--spacing-base);
+  text-align: justify;
+}
+
+.terminal-label {
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  color: var(--color-text); /* keep it clean */
+}
+
 .about-content p,
 .about-content ul,
 .about-content li {
