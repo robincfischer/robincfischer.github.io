@@ -2,8 +2,8 @@
 /* VARIABLES — CLEAN DARK THEME INSPIRED BY CHATGPT */
 /* ---------------------------------------------------------- */
 :root {
-    --font-primary: 'Inter', sans-serif; 
-    --font-heading: 'Courier New', monospace;
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Inter', sans-serif;
 
     --color-bg: #1e1e1e;
     --color-text: #e0e0e0;
@@ -31,6 +31,11 @@
     --box-shadow-base: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+@font-face {
+    font-family: 'Computer Modern';
+    src: url('https://cdn.jsdelivr.net/npm/cmu-serif@0.7.0/cmun-serif.woff2') format('woff2');
+}
+
 body, p, li {
     text-align: justify;
     text-justify: inter-word;
@@ -41,7 +46,7 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.8;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 0.3px;
     margin: 0;
 }
@@ -143,9 +148,10 @@ li::marker {
 }
 
 .nav-links li a {
-    font-family: var(--font-heading); /* or var(--font-primary) */
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: var(--font-size-base);
 }
-
 
 .nav-links li a:hover {
     text-decoration: underline;
@@ -216,34 +222,6 @@ li::marker {
     height: auto;
     border-radius: var(--border-radius-base);
     box-shadow: var(--box-shadow-base);
-}
-
-.terminal-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: var(--spacing-base);
-}
-
-.terminal-list li {
-  margin-bottom: var(--spacing-base);
-  text-align: justify;
-}
-
-.terminal-heading {
-  font-family: 'Courier New', monospace;
-  font-weight: 500;
-  font-size: 1.3em;
-  color: var(--color-heading); /* or var(--color-text) for subtlety */
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-md);
-  letter-spacing: 0.5px;
-}
-
-
-.terminal-label {
-  font-family: 'Courier New', monospace;
-  font-weight: 500;
-  color: var(--color-text); /* keep it clean */
 }
 
 .about-content p,
