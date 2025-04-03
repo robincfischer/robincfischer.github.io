@@ -2,8 +2,8 @@
 /* VARIABLES — CLEAN DARK THEME INSPIRED BY CHATGPT */
 /* ---------------------------------------------------------- */
 :root {
-    --font-primary: 'Inter', sans-serif;
-    --font-heading: 'Inter', sans-serif;
+    --font-primary: 'Inter', sans-serif; 
+    --font-heading: 'Courier New', monospace;
 
     --color-bg: #1e1e1e;
     --color-text: #e0e0e0;
