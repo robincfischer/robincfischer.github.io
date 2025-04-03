@@ -31,11 +31,6 @@
     --box-shadow-base: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-@font-face {
-    font-family: 'Courier New', monospace';
-    src: url('https://cdn.jsdelivr.net/npm/cmu-serif@0.7.0/cmun-serif.woff2') format('woff2');
-}
-
 body, p, li {
     text-align: justify;
     text-justify: inter-word;
