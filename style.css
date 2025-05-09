@@ -20,7 +20,7 @@
     --color-accent: #d29922;
     --color-accent-light: rgba(77, 144, 254, 0.08);
     --color-white: #ffffff;
-    --color-grey: #2a2a2a; /* ursprünglicher Wert */
+    --color-grey: #2a2a2a;
     --color-yellow: #FFD700;
     --color-border-image: #000000;
 
@@ -116,14 +116,13 @@ code, pre, kbd, samp {
 /* 3) Layout — zurück zum Original                            */
 /* ---------------------------------------------------------- */
 
-/* Header & Navbar wie zuvor */
 .site-header {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--color-accent-light);
     z-index: 1000;
-    padding: var(--spacing-2) 0; /* ursprüngliche Höhe (~16px) */
+    padding: var(--spacing-2) 0;
     backdrop-filter: blur(10px);
     border-bottom: var(--border-base);
 }
@@ -138,7 +137,7 @@ code, pre, kbd, samp {
 }
 
 .logo a {
-  color: #cccccc;        /* statt weiß */
+  color: #cccccc;
   font-size: var(--fs-0);
   font-weight: 500;
 }
@@ -159,9 +158,8 @@ code, pre, kbd, samp {
     text-decoration: none;
 }
 
-.nav-links a:hover { text-decoration: underline; color: var(--color-accent);}
+.nav-links a:hover { text-decoration: underline; color: var(--color-accent);} 
 
-/* Hero zurück auf 450px */
 .hero {
     position: relative;
     height: 450px;
@@ -180,7 +178,6 @@ code, pre, kbd, samp {
 .hero a  { color: var(--color-yellow); font-weight: 600; }
 .hero a:hover { text-decoration: underline; }
 
-/* Profile Photo unverändert */
 .profile-photo {
     width: 200px;
     height: auto;
@@ -194,7 +191,6 @@ code, pre, kbd, samp {
     filter: brightness(1.0) contrast(1.0);
 }
 
-/* Content Sections – Original Abstände & Hintergrundfarbe */
 .about-section,
 .teaching-container,
 .research-container,
@@ -212,7 +208,6 @@ code, pre, kbd, samp {
 .about-content img { max-width: 180px; height: auto; border-radius: var(--border-radius-base); box-shadow: var(--box-shadow-base); }
 .about-content p { max-width: 80%; margin-bottom: 0; }
 
-/* Kontakt & Footer */
 .contact-section {
     text-align: center;
     padding: var(--spacing-3) var(--spacing-2);
@@ -232,10 +227,15 @@ code, pre, kbd, samp {
     border-top: var(--border-base);
 }
 
-/* ---------------------------------------------------------- */
-/* 4) Responsive Tweaks                   */
-/* ---------------------------------------------------------- */
-
 @media (max-width: 600px) {
     .navbar { flex-direction: column; gap: var(--spacing-1); }
 }
+
+/* ===================================================== */
+/* Section Heading Enhancements                          */
+/* ===================================================== */
+
+.about-section h2,
+.research-container h2,
+.teaching-container h2,
+.CV
