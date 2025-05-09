@@ -1,10 +1,20 @@
- /* ---------------------------------------------------------- */
-/* VARIABLES — CLEAN DARK THEME INSPIRED BY CHATGPT */
 /* ---------------------------------------------------------- */
-:root {
-    --font-primary: 'Inter', sans-serif; 
-    --font-heading: 'Inter', sans-serif;
+/*  VARIABLES — CLEAN DARK THEME 2.0 (ruhiger & professioneller) */
+/* ---------------------------------------------------------- */
 
+/* 1) Google‑Fonts laden (nur benötigte Gewichte) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
+
+:root {
+    /* Primäre Schriftfamilien */
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+    /* Fallback für Legacy – bleibt erhalten */
+    --font-primary: var(--font-sans);
+    --font-heading: var(--font-sans);
+
+    /* Farben (unverändert) */
     --color-bg: #1e1e1e;
     --color-text: #e0e0e0;
     --color-heading: #ffffff;
@@ -15,12 +25,14 @@
     --color-yellow: #FFD700;
     --color-border-image: #000000;
 
-    --font-size-base: 18px;
-    --font-size-lg: 24px;
-    --font-size-xl: 40px;
-    --font-size-md: 20px;
-    --font-size-sm: 26px;
+    /* Ruhigere Font‑Scale (≈ 1.25 Modular‑Scale) */
+    --font-size-base: 18px; /* 1rem */
+    --font-size-sm: 16px;  /* kleinere Meta‑Infos */
+    --font-size-md: 22px;  /* h3, Buttons */
+    --font-size-lg: 28px;  /* h2 */
+    --font-size-xl: 36px;  /* h1 */
 
+    /* Spacing & Layout (unverändert) */
     --spacing-base: 20px;
     --spacing-lg: 40px;
     --spacing-md: 10px;
@@ -31,25 +43,27 @@
     --box-shadow-base: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-@font-face {
-    font-family: 'Computer Modern';
-    src: url('https://cdn.jsdelivr.net/npm/cmu-serif@0.7.0/cmun-serif.woff2') format('woff2');
-}
+/* ---------------------------------------------------------- */
+/* 2) Globales Typografie‑Tuning                            */
+/* ---------------------------------------------------------- */
 
 body {
-    font-family: var(--font-primary);
+    font-family: var(--font-sans);
     background-color: var(--color-bg);
     color: var(--color-text);
-    line-height: 1.8;
-    font-size: 20px;
-    letter-spacing: 0.3px;
+    line-height: 1.65;          /* ruhigeres Schriftbild */
+    font-size: var(--font-size-base);
+    letter-spacing: 0;          /* kein künstliches Tracking */
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3 {
     font-family: var(--font-heading);
-    color: var(--color-heading);
-    font-weight: 700;
+    font-weight: 600;           /* Inter‑Semibold wie HF/ChatGPT */
+    line-height: 1.25;
+    margin: 0 0 .5em;
 }
 
 h1 {
@@ -63,7 +77,7 @@ h1::after {
 
 @keyframes blink {
     0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+    50%       { opacity: 1; }
 }
 
 h2 {
@@ -82,20 +96,33 @@ p {
     text-align: justify;
 }
 
+/* Link‑Darstellung leicht verfeinert */
 a {
     color: var(--color-accent);
     text-decoration: none;
-    font-weight: bold;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    font-weight: 500;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+/* Monospace für Code & Co. */
+code, pre, kbd, samp {
+    font-family: var(--font-mono);
+    font-size: 0.95em;
+}
+
+/* ---------------------------------------------------------- */
+/* 3) Bisheriges Layout & Komponenten (unverändert)          */
+/* ---------------------------------------------------------- */
+
 ul, ol {
     margin-left: var(--spacing-lg);
     padding-left: var(--spacing-base);
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 li {
@@ -126,7 +153,7 @@ li {
     color: var(--color-white);
     font-size: var(--font-size-lg);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .nav-links {
@@ -139,6 +166,7 @@ li {
     color: var(--color-white);
     text-decoration: none;
     font-size: var(--font-size-base);
+    font-weight: 500;
 }
 
 .nav-links li a:hover {
@@ -162,17 +190,15 @@ li {
 .profile-photo {
     width: 200px;
     height: auto;
-    border-radius: 5px; /* Behalte eckige Form oder 50% für rund */
-    border: 1px solid rgba(200, 200, 200, 0.4); /* Grau mit Transparenz */
+    border-radius: 5px; /* eckig behalten */
+    border: 1px solid rgba(200, 200, 200, 0.4);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 190px;
     left: 13px;
     z-index: 1001;
-    filter: brightness(1.0) contrast(1.0); /* Minimale Farboptimierung */
+    filter: brightness(1.0) contrast(1.0);
 }
-
-
 
 .hero h1 {
     color: var(--color-white);
@@ -180,7 +206,7 @@ li {
 
 .hero a {
     color: var(--color-yellow);
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .hero a:hover {
@@ -216,7 +242,7 @@ li {
 
 .about-content p {
     max-width: 80%;
-    font-size: 19px;
+    font-size: var(--font-size-base);
     text-align: justify;
 }
 
@@ -233,7 +259,7 @@ li {
 }
 
 .contact-section p {
-    font-size: 19px;
+    font-size: var(--font-size-base);
     max-width: 600px;
     margin: 0 auto;
 }
