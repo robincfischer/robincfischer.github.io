@@ -139,7 +139,7 @@ code, pre, kbd, samp {
 
 .logo a {
   color: #cccccc;        /* statt weiß */
-  font-size: var(--fs-1);
+  font-size: var(--fs-0);
   font-weight: 500;
 }
 .logo a:hover {
@@ -188,8 +188,8 @@ code, pre, kbd, samp {
     border: 1px solid rgba(200, 200, 200, 0.4);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
-    top: 190px;
-    left: 13px;
+    top: 185px;
+    left: 14px;
     z-index: 1001;
     filter: brightness(1.0) contrast(1.0);
 }
