@@ -1,4 +1,4 @@
-/*  TYPOGRAPHY v3.2 — Neue Lesbarkeit & Navigation  */
+/*  TYPOGRAPHY v3.1 — Alte Layoutstruktur + Neue Lesbarkeit  */
 /* ---------------------------------------------------------- */
 
 /* Google-Fonts: Inter & JetBrains Mono */
@@ -9,6 +9,10 @@
     --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
+    /* Aliase (falls Legacy-Code) */
+    --font-primary: var(--font-sans);
+    --font-heading: var(--font-sans);
+
     /* ——— Farben ——— */
     --color-bg: #1e1e1e;
     --color-text: #e0e0e0;
@@ -16,20 +20,20 @@
     --color-accent: #d29922;
     --color-accent-light: rgba(77, 144, 254, 0.08);
     --color-white: #ffffff;
-    --color-grey: #2a2a2a;
+    --color-grey: #2a2a2a; /* ursprünglicher Wert */
     --color-yellow: #FFD700;
     --color-border-image: #000000;
 
     /* ——— Modular-Scale (~1.25) ——— */
-    --fs-0: 1rem;      /* 16px */
-    --fs-1: 1.25rem;   /* 20px */
-    --fs-2: 1.563rem;  /* 25px */
-    --fs-3: 1.953rem;  /* 31px */
+    --fs-0: 1rem;      /* 16px Body */
+    --fs-1: 1.25rem;   /* 20px h3 */
+    --fs-2: 1.563rem;  /* 25px h2 */
+    --fs-3: 1.953rem;  /* 31px h1 */
 
-    /* Spacing */
-    --spacing-1: 0.5rem;
-    --spacing-2: 1rem;
-    --spacing-3: 2rem;
+    /* Spacing (rem-basiert) */
+    --spacing-1: 0.5rem;  /* 8px  */
+    --spacing-2: 1rem;    /* 16px */
+    --spacing-3: 2rem;    /* 32px */
 
     --border-radius-base: 5px;
     --border-base: 1px solid #333;
@@ -41,8 +45,12 @@
     --measure: 65ch;
 }
 
-/* 1) Global Defaults */
+/* ---------------------------------------------------------- */
+/* 1) Global Defaults                                         */
+/* ---------------------------------------------------------- */
+
 html { font-size: 100%; -webkit-text-size-adjust: 100%; }
+
 body {
     font-family: var(--font-sans);
     background-color: var(--color-bg);
@@ -55,31 +63,33 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-/* 2) Typografie */
+/* ---------------------------------------------------------- */
+/* 2) Typografie                                              */
+/* ---------------------------------------------------------- */
+
 h1, h2, h3 {
-    font-family: var(--font-sans);
+    font-family: var(--font-heading);
     font-weight: 600;
     line-height: var(--line-height-heading);
     margin: 0 0 var(--spacing-2);
 }
+
 h1 { font-size: var(--fs-3); }
 h2 { font-size: var(--fs-2); }
 h3 { font-size: var(--fs-1); }
 
-/* Für alle Fließtexte: Blocksatz mit Hyphenation */
+/* Cursor-Blink entfernt → ruhiger */
+/* h1::after { content:"_"; animation: blink 1s step-end infinite; } */
+
 p, li, blockquote {
     max-width: var(--measure);
     font-size: var(--fs-0);
     margin-bottom: var(--spacing-2);
-    text-align: justify;
+    text-align: left;
     hyphens: auto;
-    word-wrap: break-word;
 }
 
-ul, ol {
-    padding-left: var(--spacing-3);
-    line-height: var(--line-height-body);
-}
+ul, ol { padding-left: var(--spacing-3); line-height: var(--line-height-body); }
 li { margin-bottom: var(--spacing-1); }
 
 /* Links */
@@ -89,19 +99,9 @@ a {
     font-weight: 500;
     text-underline-offset: 2px;
     text-decoration-thickness: 1px;
-    position: relative;
 }
+
 a:hover { text-decoration: underline; }
-/* Active nav underline */
-.nav-links a.active::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--color-accent);
-}
 
 /* Monospace */
 code, pre, kbd, samp {
@@ -112,14 +112,18 @@ code, pre, kbd, samp {
     border-radius: 4px;
 }
 
-/* 3) Layout — zurück bzw. angepasst */
+/* ---------------------------------------------------------- */
+/* 3) Layout — zurück zum Original                            */
+/* ---------------------------------------------------------- */
+
+/* Header & Navbar wie zuvor */
 .site-header {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--color-accent-light);
     z-index: 1000;
-    padding: var(--spacing-2) 0;
+    padding: var(--spacing-2) 0; /* ursprüngliche Höhe (~16px) */
     backdrop-filter: blur(10px);
     border-bottom: var(--border-base);
 }
@@ -150,11 +154,12 @@ code, pre, kbd, samp {
     font-size: var(--fs-0);
     font-weight: 500;
     color: var(--color-white);
+    text-decoration: none;
 }
 
 .nav-links a:hover { text-decoration: underline; }
 
-/* Hero */
+/* Hero zurück auf 450px */
 .hero {
     position: relative;
     height: 450px;
@@ -170,15 +175,16 @@ code, pre, kbd, samp {
 }
 
 .hero h1 { margin-bottom: var(--spacing-1); }
-.hero a { color: var(--color-yellow); font-weight: 600; }
+.hero a  { color: var(--color-yellow); font-weight: 600; }
 .hero a:hover { text-decoration: underline; }
 
+/* Profile Photo unverändert */
 .profile-photo {
     width: 200px;
     height: auto;
-    border-radius: var(--border-radius-base);
+    border-radius: 5px;
     border: 1px solid rgba(200, 200, 200, 0.4);
-    box-shadow: var(--box-shadow-base);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 190px;
     left: 13px;
@@ -186,12 +192,13 @@ code, pre, kbd, samp {
     filter: brightness(1.0) contrast(1.0);
 }
 
-/* Content Sections – angepasste Breite */
+/* Content Sections – Original Abstände & Hintergrundfarbe */
 .about-section,
+.teaching-container,
 .research-container,
-.contact-section {
-    max-width: 700px;
-    margin: 100px auto;
+.CV-container {
+    max-width: 850px;
+    margin: 120px auto var(--spacing-3) auto;
     padding: var(--spacing-3);
     background-color: var(--color-grey);
     box-shadow: var(--box-shadow-base);
@@ -199,9 +206,20 @@ code, pre, kbd, samp {
     border-radius: var(--border-radius-base);
 }
 
+.about-content { display: flex; align-items: flex-start; gap: var(--spacing-3); }
+.about-content img { max-width: 180px; height: auto; border-radius: var(--border-radius-base); box-shadow: var(--box-shadow-base); }
+.about-content p { max-width: 80%; margin-bottom: 0; }
+
 /* Kontakt & Footer */
+.contact-section {
+    text-align: center;
+    padding: var(--spacing-3) var(--spacing-2);
+    background-color: var(--color-grey);
+    border-top: 4px solid var(--color-accent);
+}
+
 .contact-section h2 { font-size: var(--fs-2); margin-bottom: var(--spacing-2); }
-.contact-section p { max-width: 600px; margin: 0 auto; }
+.contact-section p  { max-width: 600px; margin: 0 auto; }
 
 .site-footer {
     background-color: var(--color-bg);
@@ -212,7 +230,10 @@ code, pre, kbd, samp {
     border-top: var(--border-base);
 }
 
-/* Responsive Tweaks */
+/* ---------------------------------------------------------- */
+/* 4) Responsive Tweaks                   */
+/* ---------------------------------------------------------- */
+
 @media (max-width: 600px) {
     .navbar { flex-direction: column; gap: var(--spacing-1); }
 }
