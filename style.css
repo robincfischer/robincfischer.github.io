@@ -159,7 +159,7 @@ code, pre, kbd, samp {
     text-decoration: none;
 }
 
-.nav-links a:hover { text-decoration: underline; }
+.nav-links a:hover { text-decoration: underline; color: var(--color-accent);}
 
 /* Hero zurück auf 450px */
 .hero {
