@@ -138,10 +138,12 @@ code, pre, kbd, samp {
 }
 
 .logo a {
-    font-size: var(--fs-2);
-    font-weight: 600;
-    color: var(--color-white);
-    text-decoration: none;
+  color: #cccccc;        /* statt weiß */
+  font-size: var(--fs-1);
+  font-weight: 500;
+}
+.logo a:hover {
+  color: var(--color-accent);
 }
 
 .nav-links {
