@@ -199,7 +199,7 @@ code, pre, kbd, samp {
 .teaching-container,
 .research-container,
 .CV-container {
-    max-width: 850px;
+    max-width: 750px;
     margin: 120px auto var(--spacing-3) auto;
     padding: var(--spacing-3);
     background-color: var(--color-grey);
