@@ -1,274 +1,246 @@
 /* ---------------------------------------------------------- */
-/*  VARIABLES — CLEAN DARK THEME 2.0 (ruhiger & professioneller) */
+/*  TYPOGRAPHY & READABILITY REFINEMENT — v3.0               */
+/*  Fokus: ruhigeres Schriftbild ähnlich ChatGPT             */
 /* ---------------------------------------------------------- */
 
-/* 1) Google‑Fonts laden (nur benötigte Gewichte) */
+/* Google-Fonts (Inter & JetBrains Mono) */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
 
 :root {
-    /* Primäre Schriftfamilien */
+    /* ——— Schriftfamilien ——— */
     --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
-    /* Fallback für Legacy – bleibt erhalten */
+    /* Alias für bisherige Variablennamen */
     --font-primary: var(--font-sans);
     --font-heading: var(--font-sans);
 
-    /* Farben (unverändert) */
+    /* ——— Farben (unverändert) ——— */
     --color-bg: #1e1e1e;
     --color-text: #e0e0e0;
     --color-heading: #ffffff;
     --color-accent: #d29922;
     --color-accent-light: rgba(77, 144, 254, 0.08);
     --color-white: #ffffff;
-    --color-grey: #2a2a2a;
+    --color-grey: #262626; /* etwas heller für besseren Kontrast */
     --color-yellow: #FFD700;
     --color-border-image: #000000;
 
-    /* Ruhigere Font‑Scale (≈ 1.25 Modular‑Scale) */
-    --font-size-base: 18px; /* 1rem */
-    --font-size-sm: 16px;  /* kleinere Meta‑Infos */
-    --font-size-md: 22px;  /* h3, Buttons */
-    --font-size-lg: 28px;  /* h2 */
-    --font-size-xl: 36px;  /* h1 */
+    /* ——— Modular Type Scale (~1.25) ——— */
+    --fs-0: 1rem;      /* 16px  Body */
+    --fs-1: 1.25rem;   /* 20px  h3 & UI */
+    --fs-2: 1.563rem;  /* 25px  h2 */
+    --fs-3: 1.953rem;  /* 31px  h1 */
 
-    /* Spacing & Layout (unverändert) */
-    --spacing-base: 20px;
-    --spacing-lg: 40px;
-    --spacing-md: 10px;
-    --spacing-sm: 5px;
+    /* Spacing (rem-basiert) */
+    --spacing-1: 0.5rem;
+    --spacing-2: 1rem;
+    --spacing-3: 2rem;
 
     --border-radius-base: 5px;
     --border-base: 1px solid #333;
     --box-shadow-base: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+    /* Lesbarkeit */
+    --line-height-body: 1.6;
+    --line-height-heading: 1.25;
+    --measure: 65ch; /* ideale Zeilenlänge */
 }
 
 /* ---------------------------------------------------------- */
-/* 2) Globales Typografie‑Tuning                            */
+/* 1) Global Defaults                                         */
 /* ---------------------------------------------------------- */
+
+html {
+    font-size: 100%; /* 16px Basis */
+    -webkit-text-size-adjust: 100%;
+}
 
 body {
     font-family: var(--font-sans);
     background-color: var(--color-bg);
     color: var(--color-text);
-    line-height: 1.65;          /* ruhigeres Schriftbild */
-    font-size: var(--font-size-base);
-    letter-spacing: 0;          /* kein künstliches Tracking */
+    line-height: var(--line-height-body);
+    font-size: var(--fs-0);
     margin: 0;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
 
+/* ---------------------------------------------------------- */
+/* 2) Typografie                                              */
+/* ---------------------------------------------------------- */
+
 h1, h2, h3 {
     font-family: var(--font-heading);
-    font-weight: 600;           /* Inter‑Semibold wie HF/ChatGPT */
-    line-height: 1.25;
-    margin: 0 0 .5em;
+    font-weight: 600; /* ruhiger als 700 */
+    line-height: var(--line-height-heading);
+    margin: 0 0 var(--spacing-2);
 }
 
-h1 {
-    font-size: var(--font-size-xl);
+h1 { font-size: var(--fs-3); }
+h2 { font-size: var(--fs-2); }
+h3 { font-size: var(--fs-1); }
+
+/* Blinker entfernen → ruhiger */
+/* h1::after { content: "_"; animation: blink 1s step-end infinite; } */
+
+p, li, blockquote {
+    max-width: var(--measure);
+    font-size: var(--fs-0);
+    margin-bottom: var(--spacing-2);
+    text-align: left;     /* Avoid ragged spacing from justification */
+    hyphens: auto;
 }
 
-h1::after {
-    content: "_";
-    animation: blink 1s step-end infinite;
+ul, ol {
+    padding-left: var(--spacing-3);
+    line-height: var(--line-height-body);
 }
 
-@keyframes blink {
-    0%, 100% { opacity: 0; }
-    50%       { opacity: 1; }
-}
+li { margin-bottom: var(--spacing-1); }
 
-h2 {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-md);
-}
-
-h3 {
-    font-size: var(--font-size-md);
-}
-
-p {
-    font-size: var(--font-size-base);
-    margin-bottom: var(--spacing-base);
-    max-width: 750px;
-    text-align: justify;
-}
-
-/* Link‑Darstellung leicht verfeinert */
+/* Links */
 a {
     color: var(--color-accent);
     text-decoration: none;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
     font-weight: 500;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+a:hover { text-decoration: underline; }
 
-/* Monospace für Code & Co. */
+/* Monospace Elemente */
 code, pre, kbd, samp {
     font-family: var(--font-mono);
-    font-size: 0.95em;
+    font-size: 0.94em;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.2em 0.35em;
+    border-radius: 4px;
 }
 
 /* ---------------------------------------------------------- */
-/* 3) Bisheriges Layout & Komponenten (unverändert)          */
+/* 3) Layout Komponenten (nur kleine Verfeinerungen)          */
 /* ---------------------------------------------------------- */
-
-ul, ol {
-    margin-left: var(--spacing-lg);
-    padding-left: var(--spacing-base);
-    line-height: 1.6;
-}
-
-li {
-    margin-bottom: var(--spacing-sm);
-}
 
 .site-header {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--color-accent-light);
-    z-index: 1000;
-    padding: var(--spacing-md) 0;
     backdrop-filter: blur(10px);
     border-bottom: var(--border-base);
+    padding: var(--spacing-1) 0;
 }
 
 .navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-2);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-base);
 }
 
 .logo a {
-    color: var(--color-white);
-    font-size: var(--font-size-lg);
-    text-decoration: none;
+    font-size: var(--fs-2);
     font-weight: 600;
+    color: var(--color-white);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: var(--spacing-base);
+    gap: var(--spacing-2);
 }
 
-.nav-links li a {
-    color: var(--color-white);
-    text-decoration: none;
-    font-size: var(--font-size-base);
+.nav-links a {
+    font-size: var(--fs-0);
     font-weight: 500;
-}
-
-.nav-links li a:hover {
-    text-decoration: underline;
+    color: var(--color-white);
 }
 
 .hero {
     position: relative;
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("images/roa_background_fancy.png") center/cover no-repeat;
-    color: var(--color-white);
-    text-align: center;
-    height: 450px;
+    height: 420px; /* leicht reduziert */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-.profile-photo {
-    width: 200px;
-    height: auto;
-    border-radius: 5px; /* eckig behalten */
-    border: 1px solid rgba(200, 200, 200, 0.4);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 190px;
-    left: 13px;
-    z-index: 1001;
-    filter: brightness(1.0) contrast(1.0);
-}
-
-.hero h1 {
+    justify-content: center;
+    text-align: center;
     color: var(--color-white);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("images/roa_background_fancy.png") center/cover no-repeat;
 }
+
+.hero h1 { margin-bottom: var(--spacing-1); }
 
 .hero a {
     color: var(--color-yellow);
     font-weight: 600;
 }
 
-.hero a:hover {
-    text-decoration: underline;
-}
-
+/* Content Sections */
 .about-section,
 .teaching-container,
 .research-container,
 .CV-container {
-    max-width: 850px;
-    margin: 120px auto 40px auto;
-    padding: var(--spacing-lg);
     background-color: var(--color-grey);
-    box-shadow: var(--box-shadow-base);
+    max-width: 850px;
+    margin: 110px auto var(--spacing-3) auto;
+    padding: var(--spacing-3);
     border-left: 4px solid #3c3c3c;
-    text-align: left;
     border-radius: var(--border-radius-base);
+    box-shadow: var(--box-shadow-base);
 }
 
 .about-content {
     display: flex;
+    gap: var(--spacing-3);
     align-items: flex-start;
-    gap: var(--spacing-lg);
 }
 
-.about-content img {
-    max-width: 180px;
-    height: auto;
-    border-radius: var(--border-radius-base);
-    box-shadow: var(--box-shadow-base);
-}
+.about-content p { margin-bottom: 0; }
 
-.about-content p {
-    max-width: 80%;
-    font-size: var(--font-size-base);
-    text-align: justify;
+.profile-photo {
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid rgba(200, 200, 200, 0.4);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact-section {
-    text-align: center;
-    padding: var(--spacing-lg) var(--spacing-base);
     background-color: var(--color-grey);
+    text-align: center;
+    padding: var(--spacing-3) var(--spacing-2);
     border-top: 4px solid var(--color-accent);
 }
 
-.contact-section h2 {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-md);
-}
-
-.contact-section p {
-    font-size: var(--font-size-base);
-    max-width: 600px;
-    margin: 0 auto;
-}
+.contact-section h2 { font-size: var(--fs-2); }
+.contact-section p  { margin-bottom: 0; }
 
 .site-footer {
     background-color: var(--color-bg);
     color: var(--color-text);
-    padding: var(--spacing-md);
     text-align: center;
+    padding: var(--spacing-2);
     font-size: 0.9rem;
     border-top: var(--border-base);
+}
+
+/* ---------------------------------------------------------- */
+/* 4) Media Queries (Schriftgröße + Spacing mobil)            */
+/* ---------------------------------------------------------- */
+
+@media (max-width: 600px) {
+    :root {
+        --fs-3: 1.563rem; /* 25px */
+        --fs-2: 1.25rem;  /* 20px */
+        --fs-1: 1.125rem; /* 18px */
+        --measure: 50ch;  /* kürzere Zeilenlänge */
+    }
+    .navbar { flex-direction: column; gap: var(--spacing-1); }
+    .hero { height: 360px; }
 }
