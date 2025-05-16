@@ -178,9 +178,8 @@ code, pre, kbd, samp {
 .hero a  { color: var(--color-yellow); font-weight: 600; }
 .hero a:hover { text-decoration: underline; }
 
-..profile-photo {
-    width: 20vw; /* statt fix 200px, 20% der Viewport-Breite */
-    max-width: 200px;
+.profile-photo {
+    width: 200px;
     height: auto;
     border-radius: 5px;
     border: 1px solid rgba(200, 200, 200, 0.4);
@@ -190,16 +189,6 @@ code, pre, kbd, samp {
     left: 14px;
     z-index: 1001;
     filter: brightness(1.0) contrast(1.0);
-}
-
-@media (max-width: 600px) {
-    .profile-photo {
-        position: static;        /* absolute Positionierung entfernen */
-        display: block;
-        margin: 1rem auto;       /* zentrieren */
-        width: 50vw;             /* größer für Handy */
-        max-width: 180px;
-    }
 }
 
 .about-section,
