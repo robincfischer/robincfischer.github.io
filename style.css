@@ -165,7 +165,7 @@ code, pre, kbd, samp {
 .profile-photo {
     position: absolute;
     bottom: 14px;
-    left: 14px;
+    left: 25px;
     width: 120px;
     height: auto;
     border-radius: 5px;
@@ -185,7 +185,7 @@ code, pre, kbd, samp {
     .profile-photo {
         width: 80px;
         bottom: 10px;
-        left: 10px;
+        left: 20px;
     }
 }
 
