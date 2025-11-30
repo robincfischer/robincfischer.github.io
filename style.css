@@ -1,4 +1,4 @@
-/* style.css */
+/* style.css - UPDATE: Rechteckiges Profilbild */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
 
 :root {
@@ -71,7 +71,7 @@ nav a {
 }
 nav a:hover, nav a.active { color: var(--text-main); }
 
-/* HERO (Intro) - Hier ist der Foto-Fix */
+/* HERO (Intro) */
 .hero {
     display: flex;
     gap: 3rem;
@@ -100,19 +100,20 @@ nav a:hover, nav a.active { color: var(--text-main); }
 }
 .social-links a { color: var(--accent); border: none; }
 
-/* SAFETY FIX FÜR DAS FOTO */
+/* --- HIER WURDE GEÄNDERT: RECHTECKIGES FOTO --- */
 .profile-pic {
-    width: 140px !important;      /* Erzwingt 140px Breite */
-    height: 140px !important;     /* Erzwingt 140px Höhe */
-    max-width: 140px;             /* Absolute Obergrenze */
-    border-radius: 50%;           /* Macht es rund */
-    object-fit: cover;            /* Schneidet das Bild sauber zu */
+    width: 140px !important;
+    height: auto !important;      /* Höhe automatisch anpassen, damit es nicht verzerrt */
+    max-width: 140px;
+    border-radius: 4px;           /* <-- 4px statt 50%. Macht es rechteckig mit leicht weichen Ecken */
+    /* object-fit: cover;  <-- Nicht mehr nötig, wenn height: auto ist */
     filter: grayscale(10%);
     border: 1px solid var(--border);
     flex-shrink: 0;
 }
+/* ---------------------------------------------- */
 
-/* THE "LUCAS GRID" (Das Herzstück) */
+/* THE "LUCAS GRID" */
 .section-title {
     font-family: var(--font-mono);
     font-size: 0.8rem;
@@ -139,7 +140,6 @@ nav a:hover, nav a.active { color: var(--text-main); }
 
 .grid-item {
     display: grid;
-    /* Spalten: Jahr | Metric (Sterne) | Inhalt */
     grid-template-columns: 3rem 3rem 1fr; 
     gap: 1.5rem;
     align-items: baseline;
@@ -154,7 +154,7 @@ nav a:hover, nav a.active { color: var(--text-main); }
 .col-metric {
     font-family: var(--font-mono);
     font-size: 0.85rem;
-    color: var(--accent); /* Goldene Farbe für Sterne/Metrik */
+    color: var(--accent);
     text-align: right;
 }
 
@@ -195,9 +195,8 @@ footer {
 @media (max-width: 650px) {
     .hero { flex-direction: column-reverse; gap: 1.5rem; }
     
-    /* Grid auf Mobile umbrechen */
     .grid-item {
-        grid-template-columns: 1fr; /* Alles untereinander */
+        grid-template-columns: 1fr;
         gap: 0.2rem;
         margin-bottom: 1rem;
     }
