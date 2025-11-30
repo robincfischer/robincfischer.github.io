@@ -3,79 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching – Robin Fischer</title>
+    <title>Teaching - Robin Fischer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="navbar">
-            <div class="logo"><a href="index.html">Robin Fischer</a></div>
+
+    <header>
+        <div class="logo"><a href="index.html">Robin Fischer</a></div>
+        <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="teaching.html" class="active">Teaching</a></li>
                 <li><a href="cv.html">CV</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
-        <!-- New container to center and style content -->
-        <div class="teaching-container">
-            <section class="content-section">
-                <h1>Teaching</h1>
-                <p>
-                    I was fortunate to have teachers who took the time to make complex material approachable. Their efforts made a lasting difference, and I try to pay that forward in my own teaching.
-                    I don’t believe in trick questions or exams that are designed to make students fail. 
-                    I believe in fair but challenging exams, with clear expectations set in advance so students know what it takes to pass.
-                    I also care deeply about educational equity. I believe that for many students one of the biggest challenges is not the subject matter itself, but learning the academic habitus: the implicit rules and expectations that shape university life.
-                    Below, I’ve compiled a set of resources I find valuable for making this academic culture more transparent and accessible.
-                </p>
-            </section>
+        <section class="hero" style="display: block; margin-bottom: 3rem;">
+            <p style="max-width: 100%;">
+                Ich lege Wert auf Bildungsgerechtigkeit und Transparenz im akademischen "Habitus". 
+                Unten findest du Kurse, die ich unterrichte, sowie nützliche Ressourcen für Studierende.
+            </p>
+        </section>
 
-            <!-- Teaching in 2025 -->
-<section class="content-section">
-    <h3>Courses in 2025</h3>
-    <ul>
-        <li>
-            <h4> Undergrad: Academic Writing</h4>
-            <p>This course focuses on the fundamentals of academic writing.</p>
-        </li>
-        <li>
-            <h4>Undergrad: Basic Math for Data Science</h4>
-            <p>This course covers essential mathematical concepts for data science, including linear algebra, probability theory, and calculus.</p>
-        </li>
-    </ul>
-</section>
+        <section class="list-section">
+            <h2>Courses</h2>
+            
+            <div class="entry-grid">
+                <div class="year">2025</div>
+                <div class="entry-content">
+                    <h3>Academic Writing (Undergrad)</h3>
+                    <p>Fundamentals of academic writing and structuring arguments.</p>
+                </div>
 
+                <div class="year">2025</div>
+                <div class="entry-content">
+                    <h3>Basic Math for Data Science (Undergrad)</h3>
+                    <p>Linear algebra, probability theory, and calculus.</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- Useful Links & Books -->
-            <section class="content-section">
-                <h3>Useful Links & Books</h3>
-                <ul>
-                    <li><a href="https://wp.optics.arizona.edu/kupinski/wp-content/uploads/sites/91/2023/01/Writing_Science_Joshua_Schimel.pdf" target="_blank"> Joschua Schimel Writing Science(PDF)</a></li>
-                    <li><a href="https://gaussianprocess.org/gpml/chapters/RW.pdf target="_blank"> Gaussian Processes for Machine Learning (PDF)</a></li>
-                    <li><a href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.28.1.209" target="_blank"> An Economist’s Guide to Visualizing Data</a></li>
-                    <li><a href="http://karpathy.github.io/2016/09/07/phd/" target="_blank"> Well written PhD Survival Guide</a></li>
-    
-                </ul>
-            </section>
+        <section class="list-section">
+            <h2>Resources & Templates</h2>
+            
+            <div class="entry-grid">
+                <div class="year">PDF</div>
+                <div class="entry-content">
+                    <h3><a href="https://wp.optics.arizona.edu/kupinski/wp-content/uploads/sites/91/2023/01/Writing_Science_Joshua_Schimel.pdf" target="_blank">Writing Science (Joshua Schimel)</a></h3>
+                    <p>Essential guide for scientific storytelling.</p>
+                </div>
 
-            <!-- LaTeX Templates -->
-            <section class="content-section">
-                <h3>LaTeX Templates</h3>
-                <p> I have fun building LaTeX templates, and it makes my day when others find them useful.</p>
-                <ul>
-                    <li><a href="https://www.overleaf.com/articles/should-self-driving-cars-be-bound-by-isaac-asimovs-three-laws-of-robotics/njbhythggvdq" target="_blank">Academic Writing Template</a></li>
-                    <li><a href="Mock_Exam_with_logic.f" download> NA (PDF)</a></li>
-                    <li><a href="https://www.overleaf.com/latex/templates/cv-harvard-like/mdwdzhtvvbhs" target="_blank">CV Template</a></li>
-                </ul>
-            </section>
-        </div><!-- end .teaching-container -->
+                <div class="year">Link</div>
+                <div class="entry-content">
+                    <h3><a href="https://www.overleaf.com/latex/templates/cv-harvard-like/mdwdzhtvvbhs" target="_blank">LaTeX CV Template</a></h3>
+                    <p>A clean template for academic CVs.</p>
+                </div>
+                
+                <div class="year">Link</div>
+                <div class="entry-content">
+                    <h3><a href="http://karpathy.github.io/2016/09/07/phd/" target="_blank">A Survival Guide to a PhD</a></h3>
+                    <p>Andrej Karpathy's famous guide.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="site-footer">
-        <p>&copy; 2025 Robin Fischer</p>
+    <footer>
+        <span>&copy; 2025 Robin Fischer</span>
     </footer>
 </body>
 </html>
