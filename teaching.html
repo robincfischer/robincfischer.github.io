@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching - Robin Fischer</title>
+    <title>Teaching – Robin Fischer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="container">
     <header>
         <div class="logo"><a href="index.html">Robin Fischer</a></div>
         <nav>
-            <ul class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="teaching.html" class="active">Teaching</a></li>
                 <li><a href="cv.html">CV</a></li>
@@ -20,58 +22,69 @@
     </header>
 
     <main>
-        <section class="hero" style="display: block; margin-bottom: 3rem;">
-            <p style="max-width: 100%;">
-                Ich lege Wert auf Bildungsgerechtigkeit und Transparenz im akademischen "Habitus". 
-                Unten findest du Kurse, die ich unterrichte, sowie nützliche Ressourcen für Studierende.
+        <section style="margin-bottom: 4rem;">
+            <div class="section-title">Philosophy</div>
+            <p style="color: var(--text-muted); max-width: 650px;">
+                I was fortunate to have teachers who took the time to make complex material approachable. 
+                I don’t believe in trick questions or exams that are designed to make students fail. 
+                I believe in fair but challenging exams, with clear expectations set in advance.
+                I also care deeply about educational equity and helping students navigate the implicit rules of academic habitus.
             </p>
         </section>
 
-        <section class="list-section">
-            <h2>Courses</h2>
-            
-            <div class="entry-grid">
-                <div class="year">2025</div>
-                <div class="entry-content">
-                    <h3>Academic Writing (Undergrad)</h3>
-                    <p>Fundamentals of academic writing and structuring arguments.</p>
-                </div>
-
-                <div class="year">2025</div>
-                <div class="entry-content">
-                    <h3>Basic Math for Data Science (Undergrad)</h3>
-                    <p>Linear algebra, probability theory, and calculus.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="list-section">
-            <h2>Resources & Templates</h2>
-            
-            <div class="entry-grid">
-                <div class="year">PDF</div>
-                <div class="entry-content">
-                    <h3><a href="https://wp.optics.arizona.edu/kupinski/wp-content/uploads/sites/91/2023/01/Writing_Science_Joshua_Schimel.pdf" target="_blank">Writing Science (Joshua Schimel)</a></h3>
-                    <p>Essential guide for scientific storytelling.</p>
-                </div>
-
-                <div class="year">Link</div>
-                <div class="entry-content">
-                    <h3><a href="https://www.overleaf.com/latex/templates/cv-harvard-like/mdwdzhtvvbhs" target="_blank">LaTeX CV Template</a></h3>
-                    <p>A clean template for academic CVs.</p>
+        <section>
+            <div class="section-title">Courses (2025)</div>
+            <div class="grid-list">
+                <div class="grid-item">
+                    <div class="col-year">WS</div>
+                    <div class="col-metric">UG</div>
+                    <div class="col-content">
+                        <h3>Academic Writing</h3>
+                        <p>Focuses on the fundamentals of academic writing and argumentation.</p>
+                    </div>
                 </div>
                 
-                <div class="year">Link</div>
-                <div class="entry-content">
-                    <h3><a href="http://karpathy.github.io/2016/09/07/phd/" target="_blank">A Survival Guide to a PhD</a></h3>
-                    <p>Andrej Karpathy's famous guide.</p>
+                <div class="grid-item">
+                    <div class="col-year">SS</div>
+                    <div class="col-metric">UG</div>
+                    <div class="col-content">
+                        <h3>Basic Math for Data Science</h3>
+                        <p>Linear algebra, probability theory, and calculus.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section>
+            <div class="section-title">Useful Links</div>
+            <div class="grid-list">
+                
+                <div class="grid-item">
+                    <div class="col-year">PDF</div>
+                    <div class="col-metric">Book</div>
+                    <div class="col-content">
+                        <h3><a href="https://wp.optics.arizona.edu/kupinski/wp-content/uploads/sites/91/2023/01/Writing_Science_Joshua_Schimel.pdf" target="_blank">Writing Science (Joshua Schimel)</a></h3>
+                        <p>Excellent resource on scientific storytelling.</p>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="col-year">Link</div>
+                    <div class="col-metric">Blog</div>
+                    <div class="col-content">
+                        <h3><a href="http://karpathy.github.io/2016/09/07/phd/" target="_blank">A Survival Guide to a PhD</a></h3>
+                        <p>Andrej Karpathy's guide.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <span>&copy; 2025 Robin Fischer</span>
+        &copy; 2025 Robin Fischer
     </footer>
+</div>
 </body>
 </html>
