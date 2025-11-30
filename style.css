@@ -180,3 +180,10 @@ footer {
     .year { text-align: left; font-size: 0.8rem; margin-bottom: 4px; }
     .list-item { margin-bottom: 1.5rem; }
 }
+
+/* Notfall-Fix für das riesige Bild */
+.profile-photo, .profile-pic, img[src*="profile"] {
+    width: 165px !important;  /* Zwingt das Bild auf 165 Pixel Breite */
+    height: auto !important;
+    max-width: 100%;
+}
