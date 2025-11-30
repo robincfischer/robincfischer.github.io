@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Robin Fischer</title>
+    <title>CV – Robin Fischer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="container">
     <header>
         <div class="logo"><a href="index.html">Robin Fischer</a></div>
         <nav>
-            <ul class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
                 <li><a href="cv.html" class="active">CV</a></li>
@@ -20,18 +22,19 @@
     </header>
 
     <main>
-        <section class="list-section">
+        <section>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                <h2>Curriculum Vitae</h2>
-                <a href="Cv.pdf" download style="font-family: var(--font-mono); font-size: 0.9rem;">Download PDF ↓</a>
+                <div class="section-title" style="margin-bottom:0;">Curriculum Vitae</div>
+                <a href="Cv.pdf" download style="font-family: var(--font-mono); font-size: 0.85rem;">Download PDF ↓</a>
             </div>
             
-            <iframe src="Cv.pdf" width="100%" height="800px" style="border: 1px solid #333; background: #fff;"></iframe>
+            <iframe src="Cv.pdf" width="100%" height="800px" style="border: 1px solid var(--border); background: #fff;"></iframe>
         </section>
     </main>
 
     <footer>
-        <span>&copy; 2025 Robin Fischer</span>
+        &copy; 2025 Robin Fischer
     </footer>
+</div>
 </body>
 </html>
