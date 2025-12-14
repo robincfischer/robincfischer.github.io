@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV – Robin Fischer</title>
+    <title>Robin Fischer</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="PhD Researcher at WU Vienna. Energy Transition, Econometrics, Machine Learning.">
 </head>
 <body>
 
@@ -13,22 +14,47 @@
         <div class="logo"><a href="index.html">Robin Fischer</a></div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="cv.html" class="active">CV</a></li>
-            </ul>
+                </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                <div class="section-title" style="margin-bottom:0;">Curriculum Vitae</div>
-                <a href="Cv.pdf" download style="font-family: var(--font-mono); font-size: 0.85rem;">Download PDF ↓</a>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm Robin.</h1>
+                <p>
+                    I am a PhD researcher at the <strong>Institute of Data, Energy, and Sustainability</strong> (WU Vienna). 
+                    I apply Bayesian inference and machine-learning models to analyze how independent power producers and electric utilities adapt to the energy transition.
+                </p>
+                <p>
+                    Previously, I obtained an M.Sc. in Economics from the University of Cologne and Durham University and a B.A. in Mathematics & Philosophy.
+                </p>
+                
+                <div class="social-links">
+                    <a href="mailto:robin.fischer@wu.ac.at">Email</a>
+                    <a href="https://github.com/robincfischer" target="_blank">GitHub</a>
+                    <a href="https://www.wu.ac.at/ms/robin-fischer" target="_blank">WU Vienna</a>
+                    <a href="Cv.pdf" target="_blank">CV (PDF)</a>
+                </div>
             </div>
             
-            <iframe src="Cv.pdf" width="100%" height="800px" style="border: 1px solid var(--border); background: #fff;"></iframe>
+            <img src="images/profile.jpg" alt="Robin Fischer" class="profile-pic">
+        </section>
+
+        <section>
+            <div class="section-title">Latest Research</div>
+            <div class="grid-list">
+                <div class="grid-item">
+                    <div class="col-year">2025</div>
+                    <div class="col-metric">WP</div> <div class="col-content">
+                        <h3><a href="research.html">Profitability Implications of Rising Renewable Shares</a></h3>
+                        <p>Co-authored with Anton Pichler.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -36,5 +62,6 @@
         &copy; 2025 Robin Fischer
     </footer>
 </div>
+
 </body>
 </html>
