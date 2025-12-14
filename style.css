@@ -109,14 +109,15 @@ nav a:hover, nav a.active { color: var(--text-main); }
 }
 
 .hero-content p {
-    color: var(--text-muted);
+    color: var(--text-main); /* <-- HIER: Jetzt Weiß statt Grau (muted) */
     margin-bottom: 1.5rem;
     max-width: 500px;
     
-    /* Lucas Style für Fließtext im Intro: Weight 300 und Justify */
-    font-weight: 400; 
-    font-size: 1.05rem;
-    text-align: justify; /* Er nutzt justify, aber left ist oft besser lesbar. Kannst 'justify' probieren. */
+    font-weight: 300;        /* Das macht es dünn (Lucas Style) */
+    font-size: 1.1rem;       /* Lucas Text ist etwas größer, das wirkt edler */
+    line-height: 1.6;        /* Gibt dem dünnen Text Luft zum Atmen */
+    
+    opacity: 0.9;            /* Optional: Nimmt dem Weiß ganz leicht die Härte, wirkt hochwertiger */
 }
 
 .social-links {
@@ -130,9 +131,9 @@ nav a:hover, nav a.active { color: var(--text-main); }
 
 /* PROFILBILD */
 .profile-pic {
-    width: 200px !important;
+    width: 180px !important;
     height: auto !important;
-    max-width: 200px;
+    max-width: 180px;
     border-radius: 4px; /* Lucas nutzt 3rem (rund), du wolltest rechteckig. 4px ist gut. */
     filter: grayscale(10%);
     border: 1px solid var(--border);
