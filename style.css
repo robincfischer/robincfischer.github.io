@@ -102,9 +102,9 @@ nav a:hover, nav a.active { color: var(--text-main); }
 
 /* --- HIER WURDE GEÄNDERT: Profilbild etwas größer --- */
 .profile-pic {
-    width: 200px !important;      /* Geändert von 140px auf 200px */
+    width: 180px !important;      /* Geändert von 140px auf 200px */
     height: auto !important;      
-    max-width: 200px;             /* Geändert von 140px auf 200px */
+    max-width: 180px;             /* Geändert von 140px auf 200px */
     border-radius: 4px;           
     filter: grayscale(10%);
     border: 1px solid var(--border);
