@@ -118,11 +118,11 @@ nav a:hover, nav a.active { color: var(--text-main); }
     font-weight: 300; 
     
     /* 4. Größe: Normal (1rem = 16px). Space Grotesk ist von sich aus breit. */
-    font-size: 1rem;       
+    font-size: 0.8rem;       
     
     /* 5. Zeilenhöhe und minimales Tracking für die Schärfe */
     line-height: 1.6;
-    letter-spacing: -0.01em; 
+    letter-spacing: -0.03em; 
     
     margin-bottom: 1.5rem;
     max-width: 500px;
