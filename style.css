@@ -1,4 +1,4 @@
-/* style.css - UPDATE: Rechteckiges Profilbild */
+/* style.css - UPDATE: Profilbild auf 200px vergrößert */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
 
 :root {
@@ -100,13 +100,12 @@ nav a:hover, nav a.active { color: var(--text-main); }
 }
 .social-links a { color: var(--accent); border: none; }
 
-/* --- HIER WURDE GEÄNDERT: RECHTECKIGES FOTO --- */
+/* --- HIER WURDE GEÄNDERT: Profilbild etwas größer --- */
 .profile-pic {
-    width: 140px !important;
-    height: auto !important;      /* Höhe automatisch anpassen, damit es nicht verzerrt */
-    max-width: 140px;
-    border-radius: 4px;           /* <-- 4px statt 50%. Macht es rechteckig mit leicht weichen Ecken */
-    /* object-fit: cover;  <-- Nicht mehr nötig, wenn height: auto ist */
+    width: 200px !important;      /* Geändert von 140px auf 200px */
+    height: auto !important;      
+    max-width: 200px;             /* Geändert von 140px auf 200px */
+    border-radius: 4px;           
     filter: grayscale(10%);
     border: 1px solid var(--border);
     flex-shrink: 0;
