@@ -114,9 +114,9 @@ nav a:hover, nav a.active { color: var(--text-main); }
     max-width: 500px;
     
     /* Lucas Style für Fließtext im Intro: Weight 300 und Justify */
-    font-weight: 300; 
+    font-weight: 400; 
     font-size: 1.05rem;
-    text-align: left; /* Er nutzt justify, aber left ist oft besser lesbar. Kannst 'justify' probieren. */
+    text-align: justify; /* Er nutzt justify, aber left ist oft besser lesbar. Kannst 'justify' probieren. */
 }
 
 .social-links {
