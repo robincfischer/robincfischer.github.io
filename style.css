@@ -107,21 +107,25 @@ nav a:hover, nav a.active { color: var(--text-main); }
     line-height: 1.1;
     letter-spacing: -0.02em;
 }
-
 .hero-content p {
-    font-family: var(--font-mono); 
+    /* 1. Wieder zurück zur Haupt-Schriftart (Space Grotesk) */
+    font-family: var(--font-sans); 
+    
+    /* 2. Reines Weiß */
     color: var(--text-main);
     
-    /* HIER GEÄNDERT: Kleiner, damit es nicht so "schreit" */
-    font-size: 0.85rem;      
-    font-weight: 400;
+    /* 3. WICHTIG: Weight 300 (Light). Das ist der "Lucas-Look". */
+    font-weight: 300; 
     
-    line-height: 1.7;        /* Etwas weniger Zeilenhöhe passt besser zur kleinen Schrift */
-    letter-spacing: -0.04em; /* Enges Tracking für den Code-Look */
+    /* 4. Größe: Normal (1rem = 16px). Space Grotesk ist von sich aus breit. */
+    font-size: 1rem;       
+    
+    /* 5. Zeilenhöhe und minimales Tracking für die Schärfe */
+    line-height: 1.6;
+    letter-spacing: -0.01em; 
     
     margin-bottom: 1.5rem;
-    max-width: 550px;
-    opacity: 0.9;
+    max-width: 500px;
 }
 .social-links {
     font-family: var(--font-mono);
