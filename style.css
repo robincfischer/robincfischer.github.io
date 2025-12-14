@@ -101,7 +101,7 @@ nav a:hover, nav a.active { color: var(--text-main); }
 .hero-content h1 {
     /* Lucas Style für "Hi! I'm Lucas": 3em und Weight 300 */
     font-family: var(--font-sans);
-    font-size: 3em;     
+    font-size: 2.5em;     
     font-weight: 300;   /* Das macht den Unterschied! Sehr dünn und elegant. */
     margin-bottom: 1rem;
     line-height: 1.1;
