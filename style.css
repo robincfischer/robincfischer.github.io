@@ -109,21 +109,20 @@ nav a:hover, nav a.active { color: var(--text-main); }
 }
 
 .hero-content p {
-    font-family: var(--font-mono); /* Wechsel zu Space Mono */
+    font-family: var(--font-mono); 
+    color: var(--text-main);
     
-    color: var(--text-main);       /* Weißer Text */
+    /* HIER GEÄNDERT: Kleiner, damit es nicht so "schreit" */
+    font-size: 0.85rem;      
+    font-weight: 400;
     
-    font-weight: 400;              /* Standard für Mono (gibt kein 300), wirkt aber fein */
-    font-size: 0.95rem;            /* Mono läuft breiter, daher etwas kleiner als vorher */
-    
-    line-height: 1.8;              /* Hoher Zeilenabstand für den "Title-Style" Look */
-    letter-spacing: -0.04em;       /* Engeres Tracking macht es kompakt und modern */
+    line-height: 1.7;        /* Etwas weniger Zeilenhöhe passt besser zur kleinen Schrift */
+    letter-spacing: -0.04em; /* Enges Tracking für den Code-Look */
     
     margin-bottom: 1.5rem;
-    max-width: 550px;              /* Mono braucht mehr Platz in der Breite */
-    opacity: 0.95;                 /* Fast volles Weiß */
+    max-width: 550px;
+    opacity: 0.9;
 }
-
 .social-links {
     font-family: var(--font-mono);
     font-size: 0.85rem;
