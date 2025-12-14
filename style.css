@@ -109,15 +109,19 @@ nav a:hover, nav a.active { color: var(--text-main); }
 }
 
 .hero-content p {
-    color: var(--text-main); /* <-- HIER: Jetzt Weiß statt Grau (muted) */
+    font-family: var(--font-mono); /* Wechsel zu Space Mono */
+    
+    color: var(--text-main);       /* Weißer Text */
+    
+    font-weight: 400;              /* Standard für Mono (gibt kein 300), wirkt aber fein */
+    font-size: 0.95rem;            /* Mono läuft breiter, daher etwas kleiner als vorher */
+    
+    line-height: 1.8;              /* Hoher Zeilenabstand für den "Title-Style" Look */
+    letter-spacing: -0.04em;       /* Engeres Tracking macht es kompakt und modern */
+    
     margin-bottom: 1.5rem;
-    max-width: 500px;
-    
-    font-weight: 300;        /* Das macht es dünn (Lucas Style) */
-    font-size: 1.1rem;       /* Lucas Text ist etwas größer, das wirkt edler */
-    line-height: 1.6;        /* Gibt dem dünnen Text Luft zum Atmen */
-    
-    opacity: 0.9;            /* Optional: Nimmt dem Weiß ganz leicht die Härte, wirkt hochwertiger */
+    max-width: 550px;              /* Mono braucht mehr Platz in der Breite */
+    opacity: 0.95;                 /* Fast volles Weiß */
 }
 
 .social-links {
