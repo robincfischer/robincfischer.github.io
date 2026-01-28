@@ -13,7 +13,7 @@
     --font-mono: "Space Mono", "SF Mono", ui-monospace, monospace;
     
     /* Layout */
-    --max-width: 650px;
+    --max-width: 900px;
 }
 
 * {
