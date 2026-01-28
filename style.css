@@ -51,7 +51,7 @@ body {
 
 /* HEADER */
 header {
-    padding: 3rem 0;
+    padding: 3.5rem 0 2.5rem 0;
     border-bottom: none;
     margin-bottom: 2rem;
 }
@@ -82,7 +82,7 @@ nav ul {
 
 nav a {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -107,7 +107,7 @@ main {
 /* HERO SECTION */
 .hero {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     margin-bottom: 3rem;
     align-items: flex-start;
     flex-direction: row-reverse;
@@ -141,8 +141,8 @@ main {
 }
 
 .profile-pic {
-    width: 140px;
-    height: 200px;
+    width: 160px;
+    height: 220px;
     border-radius: 0;
     border: 1px solid var(--border);
     object-fit: cover;
