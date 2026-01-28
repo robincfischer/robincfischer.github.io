@@ -1,0 +1,334 @@
+/* Space Mono – ssi.inc inspired minimalism with monospace typography */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+    /* Farben: Exakt wie ssi.inc – sehr dunkel, hoher Kontrast */
+    --bg-color: #111213;
+    --text-main: #d6d6d6;
+    --text-muted: #a8a8a8;
+    --border: #1f1f1f;
+    --accent: #4a99ff;
+    
+    /* Nur Monospace Font wie ssi.inc */
+    --font-mono: "Space Mono", "SF Mono", ui-monospace, monospace;
+    
+    /* Layout */
+    --max-width: 650px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 50px 10px;
+    margin: 0 auto;
+}
+
+/* CONTAINER & LAYOUT */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    padding: 3rem 0;
+    border-bottom: none;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 2.5rem;
+}
+
+.logo a {
+    color: #b0b0b0;
+    text-decoration: none;
+    border: none;
+}
+
+.logo a:hover {
+    color: var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8a8a8a;
+    text-decoration: none;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent);
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 0;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-main);
+    margin-bottom: 0.7rem;
+    max-width: 100%;
+}
+
+.hero-content p:last-of-type {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 200px;
+    border-radius: 0;
+    border: 1px solid var(--border);
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* SECTIONS */
+section {
+    margin-bottom: 2.5rem;
+}
+
+section:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* GRID LIST */
+.grid-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.grid-item {
+    display: block;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.grid-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.col-year {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.col-metric {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.col-content h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.01em;
+}
+
+.col-content h3 a {
+    color: inherit;
+    border: none;
+    transition: color 0.3s ease;  
+}
+
+.col-content h3 a:hover {
+    color: var(--text-main);
+    text-decoration: underline;
+}
+
+.col-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.meta {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    margin-right: 0.4rem;
+    margin-bottom: 0.3rem;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.meta:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    margin-top: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    body {
+        padding: 30px 15px;
+    }
+    
+    .hero {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .grid-item {
+        padding-bottom: 0.8rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.85rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .social-links {
+        gap: 0.8rem;
+    }
+}
