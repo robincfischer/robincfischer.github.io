@@ -1,5 +1,6 @@
 /* Space Mono – ssi.inc inspired minimalism with monospace typography */
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 :root {
     /* Farben: Exakt wie ssi.inc – sehr dunkel, hoher Kontrast */
@@ -7,7 +8,7 @@
     --text-main: #d6d6d6;
     --text-muted: #a8a8a8;
     --border: #1f1f1f;
-    --accent: #4a99ff;
+    --accent: #8e8e93;
     
     /* Nur Monospace Font wie ssi.inc */
     --font-mono: "Space Mono", "SF Mono", ui-monospace, monospace;
@@ -221,14 +222,18 @@ section:last-of-type {
 }
 
 .col-metric {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    font-weight: 600;
+    font-family: "IBM Plex Mono", "SF Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     display: inline-block;
     margin-right: 0.5rem;
+}
+
+.col-content {
+    margin-top: 0.5rem;
 }
 
 .col-content h3 {
@@ -251,11 +256,12 @@ section:last-of-type {
 }
 
 .col-content p {
-    font-size: 0.95rem;
+    font-size: 0.9375rem;
     color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
     font-weight: 400;
+    font-family: "Inter", -apple-system, sans-serif;
 }
 
 .meta {
