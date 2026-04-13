@@ -191,41 +191,35 @@ section:last-of-type {
     margin-bottom: 1.2rem;
 }
 
-/* GRID LIST */
+/* GRID LIST – Option A: zwei Spalten, kein Trennstrich */
 .grid-list {
     display: flex;
     flex-direction: column;
-    gap: 1.4rem;
+    gap: 1.8rem;
 }
 
 .grid-item {
-    display: block;
-    padding-bottom: 1.2rem;
-    border-bottom: 1px solid var(--border);
-}
-
-.grid-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 0 1.5rem;
+    align-items: start;
 }
 
 .col-year {
     font-size: 0.8rem;
     color: var(--text-muted);
     font-weight: 400;
-    display: inline-block;
-    margin-right: 0.5rem;
+    padding-top: 0.15rem;
 }
 
 .col-content {
-    margin-top: 0.4rem;
 }
 
 .col-content h3 {
-    font-size: 1rem;
+    font-size: 0.97rem;
     font-weight: 600;
     color: var(--text-main);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
 }
 
 .col-content h3 a {
@@ -239,7 +233,7 @@ section:last-of-type {
 }
 
 .col-content p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
     line-height: 1.65;
     margin-bottom: 0;
