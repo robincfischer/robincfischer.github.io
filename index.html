@@ -4,32 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Robin Fischer</title>
-<link id="theme-stylesheet" rel="stylesheet" href="style.css?v=2.0">
+<link rel="stylesheet" href="style_clean.css">
 <meta name="description" content="PhD Researcher at WU Vienna. Energy Transition, Econometrics, Machine Learning.">
-<style>
-.theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    padding: 0;
-    margin: 0;
-    line-height: 1;
-    transition: color 0.2s ease;
-    color: inherit;
-    font-family: inherit;
-    opacity: 0.8;
-}
-.theme-toggle:hover { opacity: 1; }
-</style>
-<script>
-(function() {
-    var saved = localStorage.getItem('theme');
-    if (saved === 'light') {
-        document.write('<link id="theme-override" rel="stylesheet" href="style_alt20.css?v=2.0">');
-    }
-})();
-</script>
 </head>
 <body>
 
@@ -41,7 +17,6 @@
 <li><a href="index.html" class="active">Home</a></li>
 <li><a href="research.html">Research</a></li>
 <li><a href="teaching.html">Teaching</a></li>
-<li><button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">◐</button></li>
 </ul>
 </nav>
 </header>
@@ -52,7 +27,7 @@
 <h1>Robin Fischer</h1>
 <p style="font-size: 0.9rem; color: #a8a8a8; margin-bottom: 1rem;">PhD Researcher, WU Vienna</p>
 
-<p>I am a PhD researcher at the Institute of Data, Energy, and Sustainability (WU Vienna). I am particularly interested in how firms adapt under uncertainty and shifting market conditions. 
+<p>I am a PhD researcher at the Institute of Data, Energy, and Sustainability (WU Vienna). I am particularly interested in how firms adapt under uncertainty and shifting market conditions.
 Much of my work involves analyzing high-dimensional, messy economic data, where I use Bayesian and machine learning methods to find solid ground.
 </p>
 <p>
@@ -61,8 +36,11 @@ M.Sc. Economics (University of Cologne and Durham University); B.A. Mathematics 
 
 <div class="social-links">
 <a href="mailto:robin.fischer@wu.ac.at">Email</a>
+<span class="sep">·</span>
 <a href="https://github.com/robincfischer" target="_blank">GitHub</a>
-<a href="https://www.wu.ac.at/ms/robin-fischer" target="_blank">WU Vienna</a>
+<span class="sep">·</span>
+<a href="https://scholar.google.com/citations?user=tTSAiMgAAAAJ&hl=de&oi=ao" target="_blank">Scholar</a>
+<span class="sep">·</span>
 <a href="cv_robin_fischer_26.pdf" target="_blank">CV (PDF)</a>
 </div>
 </div>
@@ -75,11 +53,10 @@ M.Sc. Economics (University of Cologne and Durham University); B.A. Mathematics 
 <div class="grid-list">
 <div class="grid-item">
 <div class="col-year">2025</div>
-<div class="col-metric">Working Paper</div>
 <div class="col-content">
 <h3>
 <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6080926" target="_blank">
-                                The Widening Profitability Gap between Renewable and Fossil Power Firms in Europe
+The Widening Profitability Gap between Renewable and Fossil Power Firms in Europe
 </a>
 </h3>
 <p>
@@ -93,29 +70,9 @@ This paper examines how the profitability gap between renewable and fossil power
 
 </div>
 
-<script>
-var toggle = document.getElementById('theme-toggle');
-var isDark = localStorage.getItem('theme') !== 'light';
-toggle.textContent = isDark ? '◐' : '◑';
-
-toggle.addEventListener('click', function() {
-    isDark = !isDark;
-    var override = document.getElementById('theme-override');
-    if (isDark) {
-        if (override) override.remove();
-        toggle.textContent = '◐';
-        localStorage.setItem('theme', 'dark');
-    } else {
-        var link = document.createElement('link');
-        link.id = 'theme-override';
-        link.rel = 'stylesheet';
-        link.href = 'style_alt20.css?v=2.0';
-        document.head.appendChild(link);
-        toggle.textContent = '◑';
-        localStorage.setItem('theme', 'light');
-    }
-});
-</script>
+<footer>
+&copy; 2026 Robin Fischer
+</footer>
 
 </body>
 </html>
