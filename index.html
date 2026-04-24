@@ -4,75 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Robin Fischer</title>
-<link rel="stylesheet" href="style_clean.css">
+<link rel="stylesheet" href="style_demo2.css">
 <meta name="description" content="PhD Researcher at WU Vienna. Energy Transition, Econometrics, Machine Learning.">
+<style>
+.nameplate {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem 0 1.8rem 0;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+.nameplate-name {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+}
+
+.nameplate-role {
+    font-size: 0.83rem;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+}
+</style>
 </head>
 <body>
 
 <div class="container">
-<header>
-<div class="logo"><a href="index.html">Robin Fischer</a></div>
-<nav>
-<ul>
-<li><a href="index.html" class="active">Home</a></li>
-<li><a href="research.html">Research</a></li>
-<li><a href="teaching.html">Teaching</a></li>
-</ul>
-</nav>
-</header>
+
+  <div class="nameplate">
+    <div>
+      <div class="nameplate-name">Robin Fischer</div>
+      <div class="nameplate-role">PhD Researcher &nbsp;·&nbsp; WU Vienna</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+      </ul>
+    </nav>
+  </div>
 
 <main>
-<section class="hero">
-<div class="hero-content">
-<h1>Robin Fischer</h1>
-<p style="font-size: 0.9rem; color: #a8a8a8; margin-bottom: 1rem;">PhD Researcher, WU Vienna</p>
 
-<p>I am a PhD researcher at the Institute of Data, Energy, and Sustainability (WU Vienna). I am particularly interested in how firms adapt under uncertainty and shifting market conditions.
-Much of my work involves analyzing high-dimensional, messy economic data, where I use Bayesian and machine learning methods to find solid ground.
-</p>
-<p>
-M.Sc. Economics (University of Cologne and Durham University); B.A. Mathematics and Philosophy.
-</p>
+  <div class="hero" style="grid-template-columns: 160px 1fr;">
+    <div class="profile-wrap" style="order: 0;">
+      <img src="figures/profile.jpg" alt="Robin Fischer" class="profile-pic" style="width: 160px; height: 220px;">
+    </div>
 
-<div class="social-links">
-<a href="mailto:robin.fischer@wu.ac.at">Email</a>
-<span class="sep">·</span>
-<a href="https://github.com/robincfischer" target="_blank">GitHub</a>
-<span class="sep">·</span>
-<a href="https://scholar.google.com/citations?user=tTSAiMgAAAAJ&hl=de&oi=ao" target="_blank">Scholar</a>
-<span class="sep">·</span>
-<a href="cv_robin_fischer_26.pdf" target="_blank">CV (PDF)</a>
-</div>
-</div>
+    <div class="hero-content">
+      <div class="hero-bio">
+        <p>
+          I am a PhD researcher at WU Vienna studying how firms adapt to the energy
+          transition. My work uses Bayesian econometrics and machine learning to
+          analyze firm-level data, with a broader interest in forecasting technology
+          diffusion and economic crisis response.
+        </p>
+        <p>
+          M.Sc. Economics (University of Cologne and Durham University);
+          B.A. Mathematics and Philosophy.
+        </p>
+      </div>
 
-<img src="figures/profile.jpg" alt="Robin Fischer" class="profile-pic">
-</section>
+      <div class="links">
+        <a href="mailto:robin.fischer@wu.ac.at">email</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/robincfischer" target="_blank">github</a>
+        <span class="sep">·</span>
+        <a href="https://scholar.google.com/citations?user=tTSAiMgAAAAJ&hl=de&oi=ao" target="_blank">scholar</a>
+        <span class="sep">·</span>
+        <a href="cv_robin_fischer_26.pdf" target="_blank">cv (pdf)</a>
+      </div>
+    </div>
+  </div>
 
-<section>
-<div class="section-title">Recent Research</div>
-<div class="grid-list">
-<div class="grid-item">
-<div class="col-year">2025</div>
-<div class="col-content">
-<h3>
-<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6080926" target="_blank">
-The Widening Profitability Gap between Renewable and Fossil Power Firms in Europe
-</a>
-</h3>
-<p>
-This paper examines how the profitability gap between renewable and fossil power firms has evolved in Europe over the past two decades, applying machine learning and bayesian methods to firm-level data.
-</p>
-</div>
-</div>
-</div>
-</section>
+  <section>
+    <div class="section-label">Recent Research</div>
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-year">2025</div>
+        <div class="entry-main">
+          <h3>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6080926" target="_blank">
+              The Widening Profitability Gap between Renewable and Fossil Power Firms in Europe
+            </a>
+          </h3>
+          <p>
+            This paper examines how the profitability gap between renewable and fossil
+            power firms has evolved in Europe over the past two decades, applying machine
+            learning and Bayesian methods to firm-level data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
+<footer>&copy; 2026 Robin Fischer</footer>
+
 </div>
-
-<footer>
-&copy; 2026 Robin Fischer
-</footer>
-
 </body>
 </html>

@@ -4,77 +4,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Teaching – Robin Fischer</title>
-<link rel="stylesheet" href="style_clean.css">
+<link rel="stylesheet" href="style_demo2.css">
+<style>
+.course-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-item {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 0 1.2rem;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.course-item:first-child {
+    border-top: 1px solid var(--border);
+}
+
+.course-sem {
+    font-size: 0.78rem;
+    color: var(--faint);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.course-name {
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.course-desc {
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
+    text-align: right;
+}
+</style>
 </head>
 <body>
 
 <div class="container">
+
 <header>
-<div class="logo"><a href="index.html">Robin Fischer</a></div>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="research.html">Research</a></li>
-<li><a href="teaching.html" class="active">Teaching</a></li>
-</ul>
-</nav>
+  <div class="logo"><a href="index.html">Robin Fischer</a></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html" class="active">Teaching</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
-<section style="margin-bottom: 2.5rem;">
-<div class="section-title">Philosophy</div>
-<p style="color: var(--text-muted); max-width: 520px; font-weight: 400; line-height: 1.7; font-size: 0.98rem;">
-I was fortunate enough to have lecturers who were very engaged and always had an extra minute to explain course materials. In my teaching, I try to carry this approach forward.
-</p>
-</section>
 
-<section>
-<div class="section-title">Courses (2026)</div>
-<div class="grid-list">
-<div class="grid-item">
-<div class="col-year">SS</div>
-<div class="col-content">
-<h3>Introduction to Information Systems</h3>
-<p>BPMN, ER-Modeling, and Python coding.</p>
-</div>
-</div>
+  <section>
+    <div class="section-label">Philosophy</div>
+    <p class="intro-text">
+      I was fortunate enough to have lecturers who were very engaged and always
+      had an extra minute to explain course materials. In my teaching, I try to
+      carry this approach forward.
+    </p>
+  </section>
 
-<div class="grid-item">
-<div class="col-year">WS</div>
-<div class="col-content">
-<h3>Introduction to Information Systems</h3>
-<p>BPMN, ER-Modeling, and Python coding.</p>
-</div>
-</div>
-</div>
-</section>
+  <section>
+    <div class="section-label">Courses</div>
+    <div class="course-list">
 
-<section>
-<div class="section-title">Courses (2025)</div>
-<div class="grid-list">
-<div class="grid-item">
-<div class="col-year">WS</div>
-<div class="col-content">
-<h3>Academic Writing</h3>
-<p>Focuses on the fundamentals of academic writing and argumentation.</p>
-</div>
-</div>
+      <div class="course-item">
+        <span class="course-sem">WS 2026</span>
+        <span class="course-name">Introduction to Information Systems</span>
+        <span class="course-desc">BPMN · ER-Modeling · Python</span>
+      </div>
 
-<div class="grid-item">
-<div class="col-year">SS</div>
-<div class="col-content">
-<h3>Basic Math for Data Science</h3>
-<p>Linear algebra, probability theory, and calculus.</p>
-</div>
-</div>
-</div>
-</section>
+      <div class="course-item">
+        <span class="course-sem">SS 2026</span>
+        <span class="course-name">Introduction to Information Systems</span>
+        <span class="course-desc">BPMN · ER-Modeling · Python</span>
+      </div>
+
+      <div class="course-item">
+        <span class="course-sem">WS 2025</span>
+        <span class="course-name">Academic Writing</span>
+        <span class="course-desc">Argumentation &amp; Ethics</span>
+      </div>
+
+      <div class="course-item">
+        <span class="course-sem">SS 2025</span>
+        <span class="course-name">Basic Math for Data Science</span>
+        <span class="course-desc">Linear algebra · probability · calculus</span>
+      </div>
+
+    </div>
+  </section>
+
 </main>
 
-<footer>
-&copy; 2026 Robin Fischer
-</footer>
-</div>
+<footer>&copy; 2026 Robin Fischer</footer>
 
+</div>
 </body>
 </html>

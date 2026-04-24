@@ -1,0 +1,362 @@
+/* Demo 2 — Spectral + IBM Plex Sans, editorial academic */
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap");
+
+:root {
+    --bg:           #f5f5f5;
+    --text:         #1c1b18;
+    --muted:        #6a665f;
+    --faint:        #aba79f;
+    --border:       #e0dbd4;
+    --accent:       #c0392b;
+    --accent-soft:  #c0392b;
+
+    --serif: "Spectral", Georgia, serif;
+    --sans:  "IBM Plex Sans", system-ui, sans-serif;
+
+    --max-w: 780px;
+}
+
+/* ── RESET ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 0.96rem;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0 1.2rem;
+}
+
+a { transition: color 0.15s ease, opacity 0.15s ease; }
+
+/* ── CONTAINER ───────────────────────────────────────── */
+.container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 3.5rem 0 5rem;
+}
+
+/* ── HEADER ──────────────────────────────────────────── */
+header {
+    padding: 3.5rem 0 2.5rem 0;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    margin-bottom: 2.5rem;
+}
+
+.logo a {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo a:hover { color: var(--accent); }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    font-size: 0.78rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+nav a:hover  { color: var(--text); }
+
+nav a.active {
+    color: var(--text);
+    border-bottom: 1.5px solid var(--text);
+    padding-bottom: 1px;
+}
+
+/* ── HERO ────────────────────────────────────────────── */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 148px;
+    gap: 2.8rem;
+    margin-bottom: 4rem;
+    align-items: start;
+}
+
+.hero-name {
+    font-family: var(--serif);
+    font-size: 2.1rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: var(--text);
+    margin-bottom: 0.35rem;
+}
+
+.hero-role {
+    font-size: 0.82rem;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+    margin-bottom: 1.6rem;
+}
+
+.hero-bio p {
+    font-size: 0.95rem;
+    line-height: 1.72;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+}
+
+.hero-bio p:last-of-type {
+    font-size: 0.87rem;
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+/* ── SOCIAL LINKS ────────────────────────────────────── */
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+    margin-top: 1.5rem;
+    font-size: 0.83rem;
+}
+
+.links a {
+    color: var(--accent-soft);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.links a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.links .sep {
+    color: var(--muted);
+    margin: 0 0.5rem;
+    font-weight: 400;
+}
+
+/* ── PROFILE PIC ─────────────────────────────────────── */
+.profile-wrap {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.3rem;
+}
+
+.profile-pic {
+    width: 148px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    border: 1px solid var(--border);
+    display: block;
+    filter: grayscale(8%);
+}
+
+/* ── SECTIONS ────────────────────────────────────────── */
+section {
+    margin-bottom: 3.5rem;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+}
+
+/* ── PHILOSOPHY / INTRO BLURB ────────────────────────── */
+.intro-text {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.75;
+    max-width: 500px;
+}
+
+/* ── ENTRY LIST ──────────────────────────────────────── */
+.entries {
+    display: flex;
+    flex-direction: column;
+}
+
+.entry {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 0 1.4rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+}
+
+.entry:first-child {
+    border-top: 1px solid var(--border);
+}
+
+.entry-year {
+    font-size: 0.78rem;
+    color: var(--faint);
+    padding-top: 0.18rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.entry-main h3 {
+    font-size: 0.96rem;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 0.3rem;
+}
+
+.entry-main h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.entry-main h3 a:hover { color: var(--accent); }
+
+.entry-main p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.entry-main p a {
+    color: var(--accent-soft);
+    text-decoration: none;
+}
+
+.entry-main p a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* ── CARD LIST (Wilson-inspired boxes) ───────────────── */
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.card-entry {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+    transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card-entry:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+    border-color: #cdc8c0;
+}
+
+.card-year {
+    font-size: 0.71rem;
+    font-weight: 500;
+    color: var(--faint);
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    margin-bottom: 0.45rem;
+}
+
+.card-entry h3 {
+    font-size: 0.96rem;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 0.3rem;
+}
+
+.card-entry h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-entry h3 a:hover { color: var(--accent); }
+
+.card-meta {
+    font-size: 0.84rem;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.card-meta a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.card-meta a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* ── FOOTER ──────────────────────────────────────────── */
+footer {
+    margin-top: 2rem;
+    padding: 2rem 0 1rem 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 600px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .profile-wrap {
+        order: -1;
+        justify-content: flex-start;
+    }
+
+    .profile-pic {
+        width: 110px;
+        height: 148px;
+    }
+
+    .hero-name { font-size: 1.65rem; }
+
+    header {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    nav ul { gap: 1.4rem; }
+}
+
+@media (max-width: 400px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .hero-name { font-size: 1.45rem; }
+}
