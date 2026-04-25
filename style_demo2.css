@@ -68,10 +68,8 @@ nav ul {
 }
 
 nav a {
-    font-size: 0.78rem;
+    font-size: 0.88rem;
     font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.09em;
     color: var(--muted);
     text-decoration: none;
 }
