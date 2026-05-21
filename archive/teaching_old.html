@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching – Robin Fischer</title>
+<link rel="stylesheet" href="style_demo2.css">
+<style>
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.course-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.course-name {
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.course-meta {
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <div class="logo"><a href="index.html">Robin Fischer</a></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html" class="active">Teaching</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <div class="section-label">Philosophy</div>
+    <p class="intro-text">
+      I was fortunate enough to have lecturers who were very engaged and always
+      had an extra minute to explain course materials. In my teaching, I try to
+      carry this approach forward.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-label">Courses</div>
+    <div class="course-list">
+
+      <div class="course-item">
+        <span class="course-name">Introduction to Information Systems</span>
+        <span class="course-meta">WS 2026 &amp; SS 2026 &nbsp;·&nbsp; BPMN, ER-Modeling, Python</span>
+      </div>
+
+      <div class="course-item">
+        <span class="course-name">Academic Writing</span>
+        <span class="course-meta">WS 2025 &nbsp;·&nbsp; Argumentation &amp; Ethics</span>
+      </div>
+
+      <div class="course-item">
+        <span class="course-name">Basic Math for Data Science</span>
+        <span class="course-meta">SS 2025 &nbsp;·&nbsp; Linear algebra, probability, calculus</span>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>&copy; 2026 Robin Fischer</footer>
+
+</div>
+</body>
+</html>

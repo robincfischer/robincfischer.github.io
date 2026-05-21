@@ -3,109 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teaching – Robin Fischer</title>
-<link rel="stylesheet" href="style_demo2.css">
+<title>Teaching — Robin Fischer</title>
 <style>
-.course-list {
-    display: flex;
-    flex-direction: column;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "IBM Plex Sans", -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #111;
+  background: #fff;
 }
 
-.course-item {
-    display: grid;
-    grid-template-columns: 56px 1fr auto;
-    gap: 0 1.2rem;
-    align-items: baseline;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid var(--border);
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 52px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
 }
 
-.course-item:first-child {
-    border-top: 1px solid var(--border);
+nav a {
+  font-size: 0.82rem;
+  color: #888;
+  text-decoration: none;
+  letter-spacing: 0.01em;
 }
 
-.course-sem {
-    font-size: 0.78rem;
-    color: var(--faint);
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
+nav a:hover { color: #111; }
+nav a.active { color: #111; border-bottom: 1px solid #111; padding-bottom: 1px; }
+
+a             { color: #0000EE; }
+a:visited     { color: #551A8B; }
+a:hover       { text-decoration: underline; }
+
+main {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 100px 24px 80px;
 }
 
-.course-name {
-    font-size: 0.93rem;
-    font-weight: 500;
-    color: var(--text);
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #111;
+  margin-bottom: 1.2rem;
 }
 
-.course-desc {
-    font-size: 0.8rem;
-    color: var(--muted);
-    white-space: nowrap;
-    text-align: right;
+.intro {
+  font-size: 0.93rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
 }
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.section-label:first-of-type { margin-top: 0; }
+
+ul {
+  list-style: disc;
+  padding-left: 1.15rem;
+}
+
+ul li {
+  margin-bottom: 1.1rem;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  padding-left: 0.2rem;
+}
+
+ul li::marker { color: #111; }
+
+.course-title { font-weight: 500; }
+
+.meta {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #111;
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.award {
+  margin-top: 2.4rem;
+  font-size: 0.87rem;
+  color: #555;
+}
+
+.links-list {
+  list-style: disc;
+  padding-left: 1.15rem;
+}
+
+.links-list li {
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  padding-left: 0.2rem;
+}
+
+.links-list li::marker { color: #111; }
+
+@media (max-width: 500px) {
+  main { padding: 88px 20px 60px; }
+}
+
 </style>
 </head>
 <body>
 
-<div class="container">
-
-<header>
-  <div class="logo"><a href="index.html">Robin Fischer</a></div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="teaching.html" class="active">Teaching</a></li>
-    </ul>
-  </nav>
-</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="teaching.html" class="active">Teaching</a>
+</nav>
 
 <main>
 
-  <section>
-    <div class="section-label">Philosophy</div>
-    <p class="intro-text">
-      I was fortunate enough to have lecturers who were very engaged and always
-      had an extra minute to explain course materials. In my teaching, I try to
-      carry this approach forward.
-    </p>
-  </section>
+  <h1>Teaching</h1>
 
-  <section>
-    <div class="section-label">Courses</div>
-    <div class="course-list">
+  <p class="intro">I was fortunate to have lecturers who were engaged and always had
+  an extra minute to explain things. In my teaching, I try to carry that forward.</p>
 
-      <div class="course-item">
-        <span class="course-sem">WS 2026</span>
-        <span class="course-name">Introduction to Information Systems</span>
-        <span class="course-desc">BPMN · ER-Modeling · Python</span>
-      </div>
+  <p class="section-label">Courses</p>
 
-      <div class="course-item">
-        <span class="course-sem">SS 2026</span>
-        <span class="course-name">Introduction to Information Systems</span>
-        <span class="course-desc">BPMN · ER-Modeling · Python</span>
-      </div>
+  <ul>
+    <li>
+      <div class="course-title">Introduction to Information Systems</div>
+      <div class="meta">WU Vienna &nbsp;·&nbsp; WS 2026 &amp; SS 2026 &nbsp;·&nbsp; BPMN, ER-Modeling, Python</div>
+    </li>
+    <li>
+      <div class="course-title">Academic Writing</div>
+      <div class="meta">WU Vienna &nbsp;·&nbsp; WS 2025 &nbsp;·&nbsp; Argumentation &amp; Ethics</div>
+    </li>
+    <li>
+      <div class="course-title">Basic Math for Data Science</div>
+      <div class="meta">WU Vienna &nbsp;·&nbsp; SS 2025 &nbsp;·&nbsp; Linear algebra, probability, calculus</div>
+    </li>
+  </ul>
 
-      <div class="course-item">
-        <span class="course-sem">WS 2025</span>
-        <span class="course-name">Academic Writing</span>
-        <span class="course-desc">Argumentation &amp; Ethics</span>
-      </div>
+  <div class="award">
+    Recipient of the <strong>Excellent Teaching Award, WU Vienna 2026</strong>.
+  </div>
 
-      <div class="course-item">
-        <span class="course-sem">SS 2025</span>
-        <span class="course-name">Basic Math for Data Science</span>
-        <span class="course-desc">Linear algebra · probability · calculus</span>
-      </div>
+  <p class="section-label">Useful Links for Students</p>
 
-    </div>
-  </section>
+  <ul class="links-list">
+    <li><a href="https://www.overleaf.com/latex/templates/cv-harvard-like/mdwdzhtvvbhs" target="_blank">LaTeX CV Template</a> — Harvard-style academic CV on Overleaf</li>
+    <li><a href="https://missing.csail.mit.edu" target="_blank">The Missing Semester (MIT)</a> — command line, Git, and tooling</li>
+    <li><a href="https://www.econometrics-with-r.org" target="_blank">Econometrics with R</a> — open textbook</li>
+    <li><a href="https://www.statlearning.com" target="_blank">Introduction to Statistical Learning</a> — free ML textbook</li>
+  </ul>
 
 </main>
 
-<footer>&copy; 2026 Robin Fischer</footer>
-
-</div>
 </body>
 </html>
