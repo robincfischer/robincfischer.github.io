@@ -9,212 +9,172 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: "IBM Plex Sans", -apple-system, sans-serif;
-  font-size: 15px;
-  line-height: 1.65;
-  color: #111;
+  font-family: Menlo, Monaco, "Cascadia Code", "SF Mono", Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.72;
+  color: #000;
   background: #fff;
 }
 
-/* ── Nav ────────────────────────────────────────────────────── */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: 52px;
-  border-bottom: 1px solid #e8e8e8;
-  background: #fff;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.2rem;
-}
+a         { color: #1D4ED8; text-decoration: none; }
+a:visited { color: #1D4ED8; }
+a:hover   { text-decoration: underline; }
 
-nav a {
-  font-size: 0.82rem;
-  color: #888;
-  text-decoration: none;
-  letter-spacing: 0.01em;
-}
-
-nav a:visited { color: #888; }
-nav a:hover { color: #111; }
-nav a.active { color: #111; border-bottom: 1px solid #111; padding-bottom: 1px; }
-
-/* ── Links ──────────────────────────────────────────────────── */
-a             { color: #1D4ED8; }
-a:visited     { color: #1D4ED8; }
-a:hover       { text-decoration: underline; }
-
-/* ── Main ───────────────────────────────────────────────────── */
 main {
-  position: relative;
-  z-index: 1;
-  max-width: 560px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 88px 24px 80px;
-  text-align: center;
+  padding: 80px 32px 100px;
 }
 
-h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.75rem;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 1.15;
-  color: #111;
-  margin-bottom: 8px;
-}
-
-.keywords {
-  font-size: 0.78rem;
-  color: #777;
-  letter-spacing: 0.05em;
-  margin-bottom: 2.4rem;
-}
-
-.bio {
-  font-size: 0.94rem;
-  color: #333;
-  line-height: 1.78;
-  text-align: left;
-}
-
-.bio p + p { margin-top: 0.85rem; }
-
-.contact {
-  margin-top: 2.4rem;
-  font-size: 0.82rem;
+/* ── Header ── */
+.header {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0;
-}
-
-.contact a { text-decoration: none; }
-.contact a:hover { text-decoration: underline; }
-.contact .sep { margin: 0 8px; color: #ddd; }
-
-.toggle-wrap {
-  margin-top: 1.4rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 18px;
+  margin-bottom: 2rem;
 }
 
-.toggle-label {
-  font-size: 0.70rem;
-  color: #777;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  user-select: none;
-}
-
-.toggle-track {
-  position: relative;
-  width: 32px;
-  height: 18px;
-  border-radius: 9px;
-  background: #555;
-  cursor: pointer;
-  transition: background 0.3s;
+.avatar {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
   flex-shrink: 0;
 }
 
-.toggle-track.off { background: #ddd; }
-
-.toggle-thumb {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #fff;
-  transition: transform 0.3s;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+h1 {
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 3px;
 }
 
-.toggle-track.off .toggle-thumb { transform: translateX(0); }
-.toggle-track:not(.off) .toggle-thumb { transform: translateX(14px); }
-
-.formula-bg.hidden span {
-  opacity: 0 !important;
-  transition: opacity 0.8s;
-  animation-play-state: paused;
+.position {
+  font-size: 0.78rem;
+  color: #1D4ED8;
 }
 
-/* ── Floating formulas ──────────────────────────────────────── */
-.formula-bg {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
+/* ── Bio ── */
+.bio {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
 }
 
-.formula-bg span {
-  position: absolute;
-  bottom: -4rem;
-  opacity: 0;
-  color: #111;
-  font-family: Georgia, "Times New Roman", serif;
+.bio p + p { margin-top: 0.75rem; }
+
+/* ── Contact ── */
+.contact {
+  font-size: 0.80rem;
+  display: flex;
+  margin-bottom: 3.6rem;
+}
+
+.contact .sep { margin: 0 8px; color: #555; }
+
+/* ── Section ── */
+.section { margin-bottom: 2.6rem; }
+
+.section-header {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 1.1rem;
+}
+
+/* ── Paper ── */
+.paper {
+  border: 1px solid #000;
+  padding: 13px 15px;
+}
+
+.paper-title {
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.paper-title a { color: #000; }
+.paper-title a:hover { text-decoration: underline; }
+
+.paper-meta {
+  font-size: 0.75rem;
+  margin-bottom: 7px;
+}
+
+.paper-meta a { color: #1D4ED8; }
+
+.paper-abstract {
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.paper-note {
+  font-size: 0.73rem;
+  margin-top: 8px;
+  padding-top: 7px;
+  border-top: 1px solid #000;
+}
+
+.paper + .paper { margin-top: 10px; }
+
+/* ── Rows (talks + courses share this layout) ── */
+.row {
+  font-size: 0.83rem;
+  padding: 6px 0;
+  border-bottom: 1px solid #000;
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.row:last-of-type { border-bottom: none; }
+
+.row-left {
+  font-size: 0.75rem;
   white-space: nowrap;
-  animation: floatUp linear infinite;
+  flex-shrink: 0;
+  min-width: 30px;
 }
 
-.formula-bg span:nth-child(1)  { left:  4%; font-size: 0.80rem; animation-duration: 24s; animation-delay:  0s; }
-.formula-bg span:nth-child(2)  { left: 16%; font-size: 0.72rem; animation-duration: 31s; animation-delay:  5s; }
-.formula-bg span:nth-child(3)  { left: 29%; font-size: 0.88rem; animation-duration: 20s; animation-delay: 10s; }
-.formula-bg span:nth-child(4)  { left: 44%; font-size: 0.76rem; animation-duration: 27s; animation-delay:  2s; }
-.formula-bg span:nth-child(5)  { left: 58%; font-size: 0.84rem; animation-duration: 22s; animation-delay: 14s; }
-.formula-bg span:nth-child(6)  { left: 70%; font-size: 0.78rem; animation-duration: 29s; animation-delay:  7s; }
-.formula-bg span:nth-child(7)  { left: 82%; font-size: 0.82rem; animation-duration: 19s; animation-delay: 18s; }
-.formula-bg span:nth-child(8)  { left: 11%; font-size: 0.74rem; animation-duration: 26s; animation-delay: 21s; }
-.formula-bg span:nth-child(9)  { left: 50%; font-size: 0.86rem; animation-duration: 23s; animation-delay:  9s; }
-.formula-bg span:nth-child(10) { left: 37%; font-size: 0.70rem; animation-duration: 33s; animation-delay: 16s; }
+.row-right { flex: 1; }
 
-@keyframes floatUp {
-  0%   { transform: translateY(0);      opacity: 0;    }
-  8%   { opacity: 0.07; }
-  88%  { opacity: 0.07; }
-  100% { transform: translateY(-105vh); opacity: 0;    }
+.row-right-meta {
+  font-size: 0.75rem;
+  white-space: nowrap;
+  text-align: right;
+  flex-shrink: 0;
 }
 
-@media (max-width: 500px) {
-  main { padding: 88px 20px 60px; }
-  h1 { font-size: 1.4rem; }
+/* ── Teaching note ── */
+.award {
+  font-size: 0.78rem;
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid #000;
+}
+
+@media (max-width: 520px) {
+  main { padding: 52px 20px 80px; }
+  .row-right-meta { display: none; }
 }
 
 </style>
 </head>
 <body>
-
-<div class="formula-bg">
-  <span>P(θ | D) = P(D | θ) · P(θ) / P(D)</span>
-  <span>ℒ(θ) = −∑ᵢ log p(xᵢ | θ)</span>
-  <span>θ ← θ − α ∇θ ℒ(θ)</span>
-  <span>p(x) = (2πσ²)⁻½ exp(−(x−μ)² / 2σ²)</span>
-  <span>π(θ | x) ∝ p(x | θ) · π(θ)</span>
-  <span>β̂ = (XᵀX)⁻¹ Xᵀy</span>
-  <span>KL(q ‖ p) = ∫ q(z) log q(z)/p(z) dz</span>
-  <span>σ(z) = 1 / (1 + e⁻ᶻ)</span>
-  <span>E[X] = ∫ x · f(x) dx</span>
-  <span>∇²θ ℒ(θ) = H</span>
-</div>
-
-<nav>
-  <a href="index.html" class="active">Home</a>
-  <a href="research.html">Research</a>
-  <a href="teaching.html">Teaching</a>
-</nav>
-
 <main>
 
-  <h1>Robin Fischer</h1>
-
-  <div class="keywords">Energy Transition &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; Technological Change</div>
+  <div class="header">
+    <img class="avatar" src="figures/profile_new2.jpg" alt="Robin Fischer">
+    <div>
+      <h1>Robin Fischer</h1>
+      <div class="position">PhD Researcher · WU Vienna</div>
+    </div>
+  </div>
 
   <div class="bio">
     <p>My research focuses on three areas I see as key to a sustainable future:
@@ -222,7 +182,7 @@ h1 {
     To study them at scale, I specialize in machine learning methods
     for large economic datasets.</p>
 
-    <p>Currently, I am a PhD researcher at <a href="https://www.wu.ac.at/ms/robin-fischer">WU Vienna</a>,
+    <p>I am a PhD researcher at <a href="https://www.wu.ac.at/ms/robin-fischer">WU Vienna</a>,
     supervised by <a href="https://www.anton-pichler.com/">Anton Pichler</a>.
     Before that, I was a research intern at the
     <a href="https://www.csh.ac.at">Complexity Science Hub Vienna</a>.</p>
@@ -238,25 +198,74 @@ h1 {
     <a href="cv_robin_fischer_26.pdf" target="_blank">cv</a>
   </div>
 
-  <div class="toggle-wrap">
-    <span class="toggle-label" id="toggleLabel">formulas</span>
-    <div class="toggle-track" id="toggleAnim">
-      <div class="toggle-thumb"></div>
+  <!-- Working Papers -->
+  <div class="section">
+    <div class="section-header">Working Papers</div>
+
+    <div class="paper">
+      <div class="paper-title">
+        The Widening Profitability Gap between Renewable and Fossil Power Firms in Europe
+      </div>
+      <div class="paper-meta">
+        With <a href="https://www.anton-pichler.com/" target="_blank">Anton Pichler</a>
+        &nbsp;·&nbsp; 2026 &nbsp;·&nbsp;
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6080926" target="_blank">preprint</a>
+      </div>
+      <div class="paper-abstract">
+        We study how the European energy transition has reshaped profitability across power firms
+        with different generation portfolios.
+      </div>
+      <div class="paper-note">Cited in the <a href="https://dserver.bundestag.de/btd/21/054/2105484.pdf" target="_blank">German Bundestag</a>, April 2026.</div>
+    </div>
+
+  </div>
+
+  <!-- Selected Talks -->
+  <div class="section">
+    <div class="section-header">Selected Talks</div>
+
+    <div class="row">
+      <div class="row-left">2026</div>
+      <div class="row-right">
+        <a href="https://www.rcea.world/events/forthcoming-events/the-2026-climate-and-energy-finance-conference" target="_blank">Climate and Energy Finance Conference</a>
+        — RCEA, Madrid, Spain
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-left">2025</div>
+      <div class="row-right">
+        <a href="https://esc.ethz.ch/education/energy-summer-school-2025.html" target="_blank">ETH Energy Summer School</a>
+        — Monte Verità, Switzerland
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-left">2025</div>
+      <div class="row-right">
+        <a href="https://www.rcea.world/events/past-events/colloquium-2025/the-15th-rcea-bayesian-econometrics-workshop" target="_blank">15th RCEA Bayesian Econometrics Workshop</a>
+        — Gran Canaria, Spain
+      </div>
     </div>
   </div>
 
+  <!-- Teaching -->
+  <div class="section">
+    <div class="section-header">Teaching</div>
+
+    <div class="row">
+      <div class="row-right">Introduction to Information Systems</div>
+      <div class="row-right-meta">WU Vienna &nbsp;·&nbsp; ongoing</div>
+    </div>
+    <div class="row">
+      <div class="row-right">Basic Math for Data Science</div>
+      <div class="row-right-meta">WU Vienna &nbsp;·&nbsp; SS 2025</div>
+    </div>
+    <div class="row">
+      <div class="row-right">Academic Writing</div>
+      <div class="row-right-meta">WU Vienna &nbsp;·&nbsp; WS 2025</div>
+    </div>
+
+  </div>
+
 </main>
-
-<script>
-  const track = document.getElementById('toggleAnim');
-  const bg    = document.querySelector('.formula-bg');
-  let on = true;
-
-  track.addEventListener('click', function () {
-    on = !on;
-    bg.classList.toggle('hidden', !on);
-    track.classList.toggle('off', !on);
-  });
-</script>
 </body>
 </html>
