@@ -82,87 +82,64 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  border-bottom: 1px solid #000;
-  padding-bottom: 5px;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.9rem;
 }
 
-/* ── Paper ── */
-.paper {
-  border: 1px solid #000;
-  padding: 13px 15px;
-}
-
-.paper-title {
-  font-size: 0.84rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 5px;
-}
-
-.paper-title a { color: #000; }
-.paper-title a:hover { text-decoration: underline; }
-
-.paper-meta {
-  font-size: 0.75rem;
-  margin-bottom: 7px;
-}
-
-.paper-meta a { color: #1D4ED8; }
-
-.paper-abstract {
-  font-size: 0.78rem;
-  line-height: 1.6;
-}
-
-.paper-note {
-  font-size: 0.73rem;
-  margin-top: 8px;
-  padding-top: 7px;
-  border-top: 1px solid #000;
-}
-
-.paper + .paper { margin-top: 10px; }
-
-/* ── Rows (talks + courses share this layout) ── */
-.row {
-  font-size: 0.83rem;
-  padding: 6px 0;
-  border-bottom: 1px solid #000;
+/* ── Entries (papers, talks, teaching) ── */
+.entry {
   display: flex;
   gap: 14px;
   align-items: baseline;
+  font-size: 0.83rem;
 }
 
-.row:last-of-type { border-bottom: none; }
+.entry + .entry { margin-top: 0.8rem; }
 
-.row-left {
+.col {
+  flex: 0 0 3.4em;
   font-size: 0.75rem;
   white-space: nowrap;
-  flex-shrink: 0;
-  min-width: 30px;
 }
 
-.row-right { flex: 1; }
+.body { flex: 1; min-width: 0; }
 
-.row-right-meta {
+.title { line-height: 1.5; }
+.title a { color: #000; }
+.title a:hover { text-decoration: underline; }
+
+.meta {
   font-size: 0.75rem;
-  white-space: nowrap;
-  text-align: right;
-  flex-shrink: 0;
+  color: #555;
+  margin-top: 2px;
 }
 
-/* ── Teaching note ── */
-.award {
-  font-size: 0.78rem;
-  margin-top: 0.9rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid #000;
+/* Only coauthors in blue; other links stay muted */
+.meta a.author { color: #1D4ED8; }
+.meta a.lnk {
+  color: #555;
+  text-decoration: underline;
+  text-decoration-color: #bbb;
+  text-underline-offset: 2px;
+}
+.meta a.lnk:hover { color: #000; text-decoration-color: #000; }
+
+/* ── Teaching: light rules, term on the right ── */
+.teaching .entry + .entry {
+  border-top: 1px solid #e4e4e4;
+  margin-top: 0.55rem;
+  padding-top: 0.55rem;
+}
+
+.term {
+  font-size: 0.75rem;
+  color: #555;
+  white-space: nowrap;
 }
 
 @media (max-width: 520px) {
   main { padding: 52px 20px 80px; }
-  .row-right-meta { display: none; }
+  .teaching .entry { flex-wrap: wrap; gap: 0 14px; }
+  .teaching .term { flex-basis: 100%; }
 }
 
 </style>
@@ -199,69 +176,64 @@ h1 {
   <!-- Working Papers -->
   <div class="section">
     <div class="section-header">Working Papers</div>
-
-    <div class="paper">
-      <div class="paper-title">
-        The Widening Profitability Gap between Renewable and Fossil Power Firms in Europe
+    <div class="entry">
+      <div class="col">2026</div><div class="body">
+        <div class="title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6080926" target="_blank">The Widening Profitability Gap between Renewable and Fossil Power Firms in Europe</a></div>
+        <div class="meta">with <a class="author" href="https://www.anton-pichler.com/" target="_blank">Anton Pichler</a> · cited in the <a class="lnk" href="https://dserver.bundestag.de/btd/21/054/2105484.pdf" target="_blank">German Bundestag</a></div>
       </div>
-      <div class="paper-meta">
-        With <a href="https://www.anton-pichler.com/" target="_blank">Anton Pichler</a>
-        &nbsp;·&nbsp; 2026 &nbsp;·&nbsp;
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6080926" target="_blank">preprint</a>
-      </div>
-      <div class="paper-abstract">
-        We study how the European energy transition has reshaped profitability across power firms
-        with different generation portfolios.
-      </div>
-      <div class="paper-note">Cited in the <a href="https://dserver.bundestag.de/btd/21/054/2105484.pdf" target="_blank">German Bundestag</a>, April 2026.</div>
     </div>
-
+    <div class="entry">
+      <div class="col">2026</div><div class="body">
+        <div class="title">Is There a First-Mover Advantage in Renewable Development? Evidence from the US Power Sector</div>
+        <div class="meta">with <a class="author" href="https://francoislafond.info/" target="_blank">François Lafond</a> and <a class="author" href="https://www.anton-pichler.com/" target="_blank">Anton Pichler</a></div>
+      </div>
+    </div>
   </div>
 
   <!-- Selected Talks -->
   <div class="section">
     <div class="section-header">Selected Talks</div>
-
-    <div class="row">
-      <div class="row-left">2026</div>
-      <div class="row-right">
-        <a href="https://www.rcea.world/events/forthcoming-events/the-2026-climate-and-energy-finance-conference" target="_blank">Climate and Energy Finance Conference</a>
-        — RCEA, Madrid, Spain
+    <div class="entry">
+      <div class="col">2026</div><div class="body">
+        <div class="title"><a href="https://www.rcea.world/events/forthcoming-events/the-2026-climate-and-energy-finance-conference" target="_blank">Climate and Energy Finance Conference</a></div>
+        <div class="meta">RCEA · Madrid, Spain</div>
       </div>
     </div>
-    <div class="row">
-      <div class="row-left">2025</div>
-      <div class="row-right">
-        <a href="https://esc.ethz.ch/education/energy-summer-school-2025.html" target="_blank">ETH Energy Summer School</a>
-        — Monte Verità, Switzerland
+    <div class="entry">
+      <div class="col">2025</div><div class="body">
+        <div class="title"><a href="https://esc.ethz.ch/education/energy-summer-school-2025.html" target="_blank">ETH Energy Summer School</a></div>
+        <div class="meta">Monte Verità, Switzerland</div>
       </div>
     </div>
-    <div class="row">
-      <div class="row-left">2025</div>
-      <div class="row-right">
-        <a href="https://www.rcea.world/events/past-events/colloquium-2025/the-15th-rcea-bayesian-econometrics-workshop" target="_blank">15th RCEA Bayesian Econometrics Workshop</a>
-        — Gran Canaria, Spain
+    <div class="entry">
+      <div class="col">2025</div><div class="body">
+        <div class="title"><a href="https://www.rcea.world/events/past-events/colloquium-2025/the-15th-rcea-bayesian-econometrics-workshop" target="_blank">15th RCEA Bayesian Econometrics Workshop</a></div>
+        <div class="meta">Gran Canaria, Spain</div>
       </div>
     </div>
   </div>
 
   <!-- Teaching -->
-  <div class="section">
+  <div class="section teaching">
     <div class="section-header">Teaching</div>
-
-    <div class="row">
-      <div class="row-right">Introduction to Information Systems</div>
-      <div class="row-right-meta">WU Vienna &nbsp;·&nbsp; ongoing</div>
+    <div class="entry">
+      <div class="body">
+        <div class="title">Introduction to Information Systems</div>
+      </div>
+      <div class="term">WU Vienna · SS 2026</div>
     </div>
-    <div class="row">
-      <div class="row-right">Basic Math for Data Science</div>
-      <div class="row-right-meta">WU Vienna &nbsp;·&nbsp; SS 2025</div>
+    <div class="entry">
+      <div class="body">
+        <div class="title">Basic Math for Data Science</div>
+      </div>
+      <div class="term">WU Vienna · SS 2025</div>
     </div>
-    <div class="row">
-      <div class="row-right">Academic Writing</div>
-      <div class="row-right-meta">WU Vienna &nbsp;·&nbsp; WS 2025</div>
+    <div class="entry">
+      <div class="body">
+        <div class="title">Academic Writing</div>
+      </div>
+      <div class="term">WU Vienna · WS 2025</div>
     </div>
-
   </div>
 
 </main>
