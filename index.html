@@ -6,34 +6,45 @@
 <title>Robin Fischer</title>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
-  font-family: Menlo, Monaco, "Cascadia Code", "SF Mono", Consolas, monospace;
-  font-size: 13.5px;
-  line-height: 1.72;
-  color: #000;
-  background: #fff;
+:root {
+  --ink:   #1b1b1b;
+  --muted: #6d6d6a;
+  --rule:  #e6e5e1;
+  --blue:  #1D4ED8;
 }
 
-a         { color: #1D4ED8; text-decoration: none; }
-a:visited { color: #1D4ED8; }
-a:hover   { text-decoration: underline; }
+body {
+  font-family: "Jost", Futura, "Avenir Next", "Century Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+a         { color: var(--blue); text-decoration: none; }
+a:visited { color: var(--blue); }
+a:hover   { text-decoration: underline; text-underline-offset: 3px; }
 
 main {
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
-  padding: 80px 32px 100px;
+  padding: 96px 32px 128px;
 }
 
 /* ── Header ── */
 .header {
   display: flex;
   align-items: center;
-  gap: 18px;
-  margin-bottom: 2rem;
+  gap: 22px;
+  margin-bottom: 2.2rem;
 }
 
 .avatar {
@@ -45,100 +56,104 @@ main {
 }
 
 h1 {
-  font-size: 1.45rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  margin-bottom: 3px;
+  font-size: 2.1rem;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
 }
 
 .position {
-  font-size: 0.78rem;
-  color: #1D4ED8;
+  font-size: 0.95rem;
+  color: var(--muted);
 }
 
 /* ── Bio ── */
 .bio {
-  font-size: 0.88rem;
-  line-height: 1.75;
-  margin-bottom: 1.5rem;
+  font-size: 1.03rem;
+  line-height: 1.62;
+  margin-bottom: 1.4rem;
 }
 
-.bio p + p { margin-top: 0.75rem; }
+.bio p + p { margin-top: 0.8rem; }
 
 /* ── Contact ── */
 .contact {
-  font-size: 0.80rem;
+  font-size: 0.95rem;
   display: flex;
-  margin-bottom: 3.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
 }
 
-.contact .sep { margin: 0 8px; color: #555; }
+.contact .sep { margin: 0 9px; color: var(--muted); }
 
 /* ── Section ── */
-.section { margin-bottom: 2.6rem; }
+.section { margin-bottom: 3.2rem; }
 
 .section-header {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 0.9rem;
+  font-size: 1.45rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1.1rem;
 }
 
 /* ── Entries (papers, talks, teaching) ── */
 .entry {
   display: flex;
-  gap: 14px;
+  gap: 18px;
   align-items: baseline;
-  font-size: 0.83rem;
 }
 
-.entry + .entry { margin-top: 0.8rem; }
+.entry + .entry { margin-top: 1rem; }
 
 .col {
-  flex: 0 0 3.4em;
-  font-size: 0.75rem;
+  flex: 0 0 3em;
+  font-size: 0.95rem;
+  color: var(--muted);
   white-space: nowrap;
 }
 
 .body { flex: 1; min-width: 0; }
 
-.title { line-height: 1.5; }
-.title a { color: #000; }
+.title { font-weight: 500; line-height: 1.4; }
+.title a { color: var(--ink); }
 .title a:hover { text-decoration: underline; }
 
 .meta {
-  font-size: 0.75rem;
-  color: #555;
-  margin-top: 2px;
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-top: 3px;
 }
 
 /* Only coauthors in blue; other links stay muted */
-.meta a.author { color: #1D4ED8; }
+.meta a.author { color: var(--blue); }
 .meta a.lnk {
-  color: #555;
+  color: var(--muted);
   text-decoration: underline;
-  text-decoration-color: #bbb;
-  text-underline-offset: 2px;
+  text-decoration-color: #c4c3bf;
+  text-underline-offset: 3px;
 }
-.meta a.lnk:hover { color: #000; text-decoration-color: #000; }
+.meta a.lnk:hover { color: var(--ink); text-decoration-color: var(--ink); }
 
 /* ── Teaching: light rules, term on the right ── */
+.teaching .title { font-weight: 400; }
+
 .teaching .entry + .entry {
-  border-top: 1px solid #e4e4e4;
-  margin-top: 0.55rem;
-  padding-top: 0.55rem;
+  border-top: 1px solid var(--rule);
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
 }
 
 .term {
-  font-size: 0.75rem;
-  color: #555;
+  font-size: 0.92rem;
+  color: var(--muted);
   white-space: nowrap;
 }
 
 @media (max-width: 520px) {
-  main { padding: 52px 20px 80px; }
-  .teaching .entry { flex-wrap: wrap; gap: 0 14px; }
+  main { padding: 56px 20px 88px; }
+  h1 { font-size: 1.8rem; }
+  .teaching .entry { flex-wrap: wrap; gap: 0 18px; }
   .teaching .term { flex-basis: 100%; }
 }
 
