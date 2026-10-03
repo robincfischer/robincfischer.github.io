@@ -4,157 +4,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Robin Fischer</title>
+<!-- Saved idea (Oct 2026): monospace site after robots.stanford.edu, entries framed on hover -->
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+
+/* ══ Design system ══════════════════════════════════════════════
+   Type:      one face (system monospace), two sizes: 20 px name, 13 px everything else
+   Hierarchy: weight and tone only — bold name, grey section labels,
+              ink for what you read, grey for what supports it
+   Links:     read as text, underlined on hover
+   Spacing:   4 px grid, line height 20 px — gaps of 8 · 16 · 32 · 48 px
+   Measure:   72 characters per line (1ch = one monospace character)
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  --ink:  #111111;
+  --grey: #666666;
+  --line: #dddddd;
+}
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root {
-  --ink:   #1b1b1b;
-  --muted: #6d6d6a;
-  --rule:  #e6e5e1;
-  --blue:  var(--ink);   /* no accent colour: links in ink, underline on hover */
-}
-
 body {
-  font-family: "Jost", Futura, "Avenir Next", "Century Gothic", sans-serif;
-  font-size: 16px;
-  line-height: 1.55;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 20px;
   color: var(--ink);
-  background: #fff;
+  background: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
 
-a         { color: var(--blue); text-decoration: none; }
-a:visited { color: var(--blue); }
-a:hover   { text-decoration: underline; text-underline-offset: 3px; }
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 main {
-  max-width: 640px;
+  max-width: calc(72ch + 48px);
   margin: 0 auto;
-  padding: 96px 32px 128px;
+  padding: 80px 24px 96px;
 }
 
 /* ── Header ── */
-.header {
+header {
   display: flex;
   align-items: center;
-  gap: 22px;
-  margin-bottom: 2.2rem;
+  gap: 24px;
+  margin-bottom: 32px;
 }
 
-.avatar {
-  width: 96px;
-  height: 96px;
-  object-fit: cover;
+.photo {
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
+  object-fit: cover;
   flex-shrink: 0;
 }
 
 h1 {
-  font-size: 1.9rem;
-  font-weight: 300;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  margin-bottom: 6px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.position {
-  font-size: 0.95rem;
-  color: var(--muted);
+.role { color: var(--grey); margin-top: 4px; }
+
+/* ── Bio and contact ── */
+.bio p + p { margin-top: 8px; }
+
+.contact { margin-top: 16px; }
+.contact .sep { color: var(--grey); margin: 0 1ch; }
+
+/* ── Sections ── */
+section { margin-top: 48px; }
+
+h2 {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
 }
 
-/* ── Bio ── */
-.bio {
-  font-size: 1.03rem;
-  line-height: 1.62;
-  margin-bottom: 1.4rem;
-}
-
-.bio p + p { margin-top: 0.8rem; }
-
-/* ── Contact ── */
-.contact {
-  font-size: 0.86rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 4rem;
-}
-
-.contact .sep { margin: 0 9px; color: var(--muted); }
-
-/* ── Section ── */
-.section { margin-bottom: 3.2rem; }
-
-.section-header {
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.2;
-  margin-bottom: 1.1rem;
-}
-
-/* ── Entries (papers, talks, teaching) ── */
+/* ── Entries: title in ink, one grey line below ── */
 .entry {
-  display: flex;
-  gap: 18px;
-  align-items: baseline;
+  display: block;
+  padding: 8px 0;
 }
 
-.entry + .entry { margin-top: 1rem; }
+.entry .meta { color: var(--grey); }
 
-.col {
-  flex: 0 0 3em;
-  font-size: 0.95rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
+/* Whole entry is the link (talks): underline the title only */
+a.entry:hover { text-decoration: none; }
+a.entry:hover > div:first-child { text-decoration: underline; text-underline-offset: 3px; }
 
-.body { flex: 1; min-width: 0; }
-
-.title { font-weight: 500; line-height: 1.4; }
-.title a { color: var(--ink); }
-.title a:hover { text-decoration: underline; }
-
-.meta {
-  font-size: 0.92rem;
-  color: var(--muted);
-  margin-top: 3px;
-}
-
-/* Only coauthors in blue; other links stay muted */
-.meta a.author { color: var(--blue); }
-.meta a.lnk {
-  color: var(--muted);
-  text-decoration: underline;
-  text-decoration-color: #c4c3bf;
-  text-underline-offset: 3px;
-}
-.meta a.lnk:hover { color: var(--ink); text-decoration-color: var(--ink); }
-
-/* ── Teaching: light rules, term on the right ── */
-.teaching .title { font-weight: 400; }
-
-.teaching .entry + .entry {
-  border-top: 1px solid var(--rule);
-  margin-top: 0.65rem;
-  padding-top: 0.65rem;
-}
-
-.term {
-  font-size: 0.92rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-@media (max-width: 520px) {
-  main { padding: 56px 20px 88px; }
-  h1 { font-size: 1.65rem; }
-  .teaching .entry { flex-wrap: wrap; gap: 0 18px; }
-  .teaching .term { flex-basis: 100%; }
+@media (max-width: 560px) {
+  main { padding: 48px 20px 72px; }
+  header { gap: 16px; }
+  .photo { width: 72px; height: 72px; }
 }
 
 </style>
@@ -162,13 +113,13 @@ h1 {
 <body>
 <main>
 
-  <div class="header">
-    <img class="avatar" src="figures/profile_new2.jpg" alt="Robin Fischer">
+  <header>
+    <img class="photo" src="figures/profile_new2.jpg" alt="Robin Fischer">
     <div>
       <h1>Robin Fischer</h1>
-      <div class="position">PhD Candidate · WU Vienna</div>
+      <p class="role">PhD Researcher</p>
     </div>
-  </div>
+  </header>
 
   <div class="bio">
     <p>I am a PhD candidate in Economics at <a href="https://www.wu.ac.at/ms/robin-fischer">WU Vienna</a>,
@@ -180,76 +131,57 @@ h1 {
     and Philosophy from TU Braunschweig.</p>
   </div>
 
-  <div class="contact">
-    <a href="mailto:robincfischer@gmail.com">Email</a>
-    <span class="sep">·</span>
-    <a href="https://scholar.google.com/citations?user=tTSAiMgAAAAJ&hl=de&oi=ao" target="_blank">Google Scholar</a>
-    <span class="sep">·</span>
-    <a href="cv_robin_fischer_26.pdf" target="_blank">CV</a>
-  </div>
+  <p class="contact">
+    <a href="mailto:robincfischer@gmail.com">Email</a><span class="sep">·</span><a href="https://scholar.google.com/citations?user=tTSAiMgAAAAJ&hl=de&oi=ao" target="_blank">Google Scholar</a><span class="sep">·</span><a href="cv_robin_fischer_26.pdf" target="_blank">CV</a>
+  </p>
 
-  <!-- Working Papers -->
-  <div class="section">
-    <div class="section-header">Working Papers</div>
+  <section>
+    <h2>Working Papers</h2>
     <div class="entry">
-      <div class="body">
-        <div class="title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6080926" target="_blank">The Widening Profitability Gap between Renewable and Fossil Power Firms in Europe</a></div>
-        <div class="meta">with <a class="author" href="https://www.anton-pichler.com/" target="_blank">Anton Pichler</a> · cited in the <a class="lnk" href="https://dserver.bundestag.de/btd/21/054/2105484.pdf" target="_blank">German Bundestag</a></div>
-      </div>
+      <div><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6080926" target="_blank">The Widening Profitability Gap between Renewable and Fossil Power Firms in Europe</a></div>
+      <div class="meta">with <a href="https://www.anton-pichler.com/" target="_blank">Anton Pichler</a> · cited in the <a href="https://dserver.bundestag.de/btd/21/054/2105484.pdf" target="_blank">German Bundestag</a></div>
     </div>
     <div class="entry">
-      <div class="body">
-        <div class="title">Is There a First-Mover Advantage in Renewable Development? Evidence from the US Power Sector</div>
-        <div class="meta">with <a class="author" href="https://francoislafond.info/" target="_blank">François Lafond</a> and <a class="author" href="https://www.anton-pichler.com/" target="_blank">Anton Pichler</a></div>
-      </div>
+      <div>Is There a First-Mover Advantage in Renewable Development? Evidence from the US Power Sector</div>
+      <div class="meta">with <a href="https://francoislafond.info/" target="_blank">François Lafond</a> and <a href="https://www.anton-pichler.com/" target="_blank">Anton Pichler</a></div>
     </div>
-  </div>
+  </section>
 
-  <!-- Selected Talks -->
-  <div class="section">
-    <div class="section-header">Selected Talks</div>
-    <div class="entry">
-      <div class="col">2026</div><div class="body">
-        <div class="title"><a href="https://www.rcea.world/events/forthcoming-events/the-2026-climate-and-energy-finance-conference" target="_blank">Climate and Energy Finance Conference</a></div>
-        <div class="meta">RCEA · Madrid, Spain</div>
-      </div>
-    </div>
-    <div class="entry">
-      <div class="col">2025</div><div class="body">
-        <div class="title"><a href="https://esc.ethz.ch/education/energy-summer-school-2025.html" target="_blank">ETH Energy Summer School</a></div>
-        <div class="meta">Monte Verità, Switzerland</div>
-      </div>
-    </div>
-    <div class="entry">
-      <div class="col">2025</div><div class="body">
-        <div class="title"><a href="https://www.rcea.world/events/past-events/colloquium-2025/the-15th-rcea-bayesian-econometrics-workshop" target="_blank">15th RCEA Bayesian Econometrics Workshop</a></div>
-        <div class="meta">Gran Canaria, Spain</div>
-      </div>
-    </div>
-  </div>
+  <section>
+    <h2>Selected Talks</h2>
+    <a class="entry" href="https://www.rcea.world/events/forthcoming-events/the-2026-climate-and-energy-finance-conference" target="_blank">
+      <div>Climate and Energy Finance Conference</div>
+      <div class="meta">2026 · RCEA · Madrid, Spain</div>
+    </a>
+    <a class="entry" href="https://esc.ethz.ch/education/energy-summer-school-2025.html" target="_blank">
+      <div>ETH Energy Summer School</div>
+      <div class="meta">2025 · Monte Verità, Switzerland</div>
+    </a>
+    <a class="entry" href="https://www.rcea.world/events/past-events/colloquium-2025/the-15th-rcea-bayesian-econometrics-workshop" target="_blank">
+      <div>15th RCEA Bayesian Econometrics Workshop</div>
+      <div class="meta">2025 · Gran Canaria, Spain</div>
+    </a>
+  </section>
 
-  <!-- Teaching -->
-  <div class="section teaching">
-    <div class="section-header">Teaching</div>
+  <section>
+    <h2>Teaching</h2>
     <div class="entry">
-      <div class="body">
-        <div class="title">Introduction to Information Systems</div>
-      </div>
-      <div class="term">WU Vienna · SS 2026</div>
+      <div>Introduction to Information Systems</div>
+      <div class="meta">WU Vienna · SS 2026</div>
     </div>
     <div class="entry">
-      <div class="body">
-        <div class="title">Basic Math for Data Science</div>
-      </div>
-      <div class="term">WU Vienna · SS 2025</div>
+      <div>Basic Math for Data Science</div>
+      <div class="meta">WU Vienna · SS 2025</div>
     </div>
     <div class="entry">
-      <div class="body">
-        <div class="title">Academic Writing</div>
-      </div>
-      <div class="term">WU Vienna · WS 2025</div>
+      <div>Academic Writing</div>
+      <div class="meta">WU Vienna · WS 2025</div>
     </div>
-  </div>
+    <div class="entry">
+      <div>Excellent Teaching Award</div>
+      <div class="meta">WU Vienna · 2026</div>
+    </div>
+  </section>
 
 </main>
 </body>
