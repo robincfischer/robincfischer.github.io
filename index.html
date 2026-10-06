@@ -157,37 +157,79 @@ h1 {
   .teaching .term { flex-basis: 100%; }
 }
 
+
+/* ══ Hybrid: James Okun's layout with this site's typography ══
+   Left: a profile column that stays in view (large photo, short bio, contact).
+   Right: the live site's sections, headings and entries — no rules between sections. */
+
+main.hybrid { max-width: 1040px; padding-top: 96px; }
+
+.profile h1 { margin-bottom: 18px; }
+.profile .photo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 20px;
+}
+.profile .bio { font-size: 1rem; margin-bottom: 0.6rem; }
+.profile .place { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
+
+/* Contact links with small line icons; only the label underlines on hover */
+.profile .contact { gap: 6px 18px; margin-bottom: 0; }
+.icon-link { display: inline-flex; align-items: center; gap: 6px; }
+.icon-link svg { flex-shrink: 0; }
+.icon-link:hover { text-decoration: none; }
+.icon-link:hover span { text-decoration: underline; text-underline-offset: 3px; }
+
+.work .section:first-child .section-header { margin-top: 0.35rem; }
+
+@media (min-width: 900px) {
+  main.hybrid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    column-gap: 88px;
+    align-items: start;
+  }
+  .profile { position: sticky; top: 96px; }
+}
+
+@media (max-width: 899px) {
+  main.hybrid { max-width: 640px; }
+  .profile { margin-bottom: 3rem; }
+}
 </style>
 </head>
 <body>
-<main>
+<main class="hybrid">
 
-  <div class="header">
-    <img class="avatar" src="figures/profile_new2.jpg" alt="Robin Fischer">
-    <div>
-      <h1>Robin Fischer</h1>
-      <div class="position">PhD Candidate · WU Vienna</div>
+  <aside class="profile">
+    <h1>Robin Fischer</h1>
+    <img class="photo" src="figures/profile_new2.jpg" alt="Robin Fischer">
+    <div class="bio">
+      <p>I am a PhD candidate in Economics at <a href="https://www.wu.ac.at/ms/robin-fischer">WU Vienna</a>,
+      hosted at the <a href="https://www.csh.ac.at">Complexity Science Hub</a>.
+      My research focuses on technological change.</p>
     </div>
-  </div>
+    <p class="place">Vienna, Austria</p>
+    <div class="contact">
+      <a class="icon-link" href="mailto:robincfischer@gmail.com">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
+        <span>Email</span>
+      </a>
+      <a class="icon-link" href="https://scholar.google.com/citations?user=tTSAiMgAAAAJ&hl=de&oi=ao" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+        <span>Google Scholar</span>
+      </a>
+      <a class="icon-link" href="cv_robin_fischer_26.pdf" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2H14L20 8V22H6V2Z"/><path d="M14 2V8H20"/><line x1="10" y1="12" x2="16" y2="12"/><line x1="10" y1="16" x2="16" y2="16"/></svg>
+        <span>CV</span>
+      </a>
+    </div>
+  </aside>
 
-  <div class="bio">
-    <p>I am a PhD candidate in Economics at <a href="https://www.wu.ac.at/ms/robin-fischer">WU Vienna</a>,
-    hosted at the <a href="https://www.csh.ac.at">Complexity Science Hub</a>.
-    My research focuses on technological change: how firms learn and compete as new technologies emerge.
-    My broader interests include productivity, causal inference, and forecasting.</p>
-
-    <p>Previously, I earned an M.Sc. in Economics from the University of Cologne and a B.A. in Mathematics
-    and Philosophy from TU Braunschweig.</p>
-  </div>
-
-  <div class="contact">
-    <a href="mailto:robincfischer@gmail.com">Email</a>
-    <span class="sep">·</span>
-    <a href="https://scholar.google.com/citations?user=tTSAiMgAAAAJ&hl=de&oi=ao" target="_blank">Google Scholar</a>
-    <span class="sep">·</span>
-    <a href="cv_robin_fischer_26.pdf" target="_blank">CV</a>
-  </div>
-
+  <div class="work">
   <!-- Working Papers -->
   <div class="section">
     <div class="section-header">Working Papers</div>
@@ -249,6 +291,8 @@ h1 {
       </div>
       <div class="term">WU Vienna · WS 2025</div>
     </div>
+  </div>
+
   </div>
 
 </main>
