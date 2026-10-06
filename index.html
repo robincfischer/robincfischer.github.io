@@ -43,13 +43,13 @@ main {
 .header {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 26px;
   margin-bottom: 2.2rem;
 }
 
 .avatar {
-  width: 96px;
-  height: 96px;
+  width: 112px;
+  height: 112px;
   object-fit: cover;
   border-radius: 50%;
   flex-shrink: 0;
@@ -151,6 +151,8 @@ h1 {
 }
 
 @media (max-width: 520px) {
+  .header { gap: 22px; }
+  .avatar { width: 96px; height: 96px; }
   main { padding: 56px 20px 88px; }
   h1 { font-size: 1.65rem; }
   .teaching .entry { flex-wrap: wrap; gap: 0 18px; }
