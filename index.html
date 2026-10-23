@@ -3,176 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Robin Fischer — PhD candidate in Economics at WU Vienna, researching technological change, firms, and productivity.">
 <title>Robin Fischer</title>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --ink:   #1b1b1b;
-  --muted: #6d6d6a;
-  --rule:  #e6e5e1;
-  --blue:  var(--ink);   /* no accent colour: links in ink, underline on hover */
-}
-
-body {
-  font-family: "Jost", Futura, "Avenir Next", "Century Gothic", sans-serif;
-  font-size: 16px;
-  line-height: 1.55;
-  color: var(--ink);
-  background: #fff;
-  -webkit-font-smoothing: antialiased;
-}
-
-a         { color: var(--blue); text-decoration: none; }
-a:visited { color: var(--blue); }
-a:hover   { text-decoration: underline; text-underline-offset: 3px; }
-
-main {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 96px 32px 128px;
-}
-
-/* ── Header ── */
-.header {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  margin-bottom: 2.2rem;
-}
-
-.avatar {
-  width: 112px;
-  height: 112px;
-  object-fit: cover;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-h1 {
-  font-size: 1.9rem;
-  font-weight: 300;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  margin-bottom: 6px;
-}
-
-.position {
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
-/* ── Bio ── */
-.bio {
-  font-size: 1.03rem;
-  line-height: 1.62;
-  margin-bottom: 1.4rem;
-}
-
-.bio p + p { margin-top: 0.8rem; }
-
-/* ── Contact ── */
-.contact {
-  font-size: 0.86rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 4rem;
-}
-
-.contact .sep { margin: 0 9px; color: var(--muted); }
-
-/* ── Section ── */
-.section { margin-bottom: 3.2rem; }
-
-.section-header {
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.2;
-  margin-bottom: 1.1rem;
-}
-
-/* ── Entries (papers, talks, teaching) ── */
-.entry {
-  display: flex;
-  gap: 18px;
-  align-items: baseline;
-}
-
-.entry + .entry { margin-top: 1rem; }
-
-.col {
-  flex: 0 0 3em;
-  font-size: 0.95rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-.body { flex: 1; min-width: 0; }
-
-.title { font-weight: 500; line-height: 1.4; }
-.title a { color: var(--ink); }
-.title a:hover { text-decoration: underline; }
-
-.meta {
-  font-size: 0.92rem;
-  color: var(--muted);
-  margin-top: 3px;
-}
-
-/* Only coauthors in blue; other links stay muted */
-.meta a.author { color: var(--blue); }
-.meta a.lnk {
-  color: var(--muted);
-  text-decoration: underline;
-  text-decoration-color: #c4c3bf;
-  text-underline-offset: 3px;
-}
-.meta a.lnk:hover { color: var(--ink); text-decoration-color: var(--ink); }
-
-/* ── Teaching: light rules, term on the right ── */
-.teaching .title { font-weight: 400; }
-
-.teaching .entry + .entry {
-  border-top: 1px solid var(--rule);
-  margin-top: 0.65rem;
-  padding-top: 0.65rem;
-}
-
-.term {
-  font-size: 0.92rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-@media (max-width: 520px) {
-  .header { gap: 22px; }
-  .avatar { width: 96px; height: 96px; }
-  main { padding: 56px 20px 88px; }
-  h1 { font-size: 1.65rem; }
-  .teaching .entry { flex-wrap: wrap; gap: 0 18px; }
-  .teaching .term { flex-basis: 100%; }
-}
-
-</style>
+<link rel="stylesheet" href="portrait_optimized_demo.css">
 </head>
 <body>
-<main>
-
-  <div class="header">
-    <img class="avatar" src="figures/profile_new2.jpg" alt="Robin Fischer">
+<main class="container">
+  <header class="hero">
+    <img class="hero-photo" src="figures/portrait_circle_preview.jpg" alt="Portrait of Robin Fischer" width="1000" height="1000">
     <div>
       <h1>Robin Fischer</h1>
-      <div class="position">PhD Candidate · WU Vienna</div>
+      <p class="position">PhD Candidate · WU Vienna</p>
     </div>
-  </div>
-
-  <div class="bio">
+  </header>
+  <div class="intro">
+    <div class="bio">
     <p>I am a PhD candidate in Economics at <a href="https://www.wu.ac.at/ms/robin-fischer">WU Vienna</a>,
     hosted at the <a href="https://www.csh.ac.at">Complexity Science Hub</a>.
     My research focuses on technological change: how firms learn and compete as new technologies emerge.
@@ -189,17 +36,24 @@ h1 {
     <span class="sep">·</span>
     <a href="cv_robin_fischer_26.pdf" target="_blank">CV</a>
   </div>
-
+  </div>
+  <div class="content">
   <!-- Working Papers -->
   <div class="section">
-    <div class="section-header">Working Papers</div>
+    <h2 class="section-header">Working Papers</h2>
     <div class="entry">
+      <a class="paper-thumb" href="figures/technology_evolution_graph.png" target="_blank" rel="noopener noreferrer" aria-label="Open the technology evolution figure at full size">
+        <img src="figures/technology_evolution_graph.png" alt="Network graph showing transitions among power generation technologies" loading="lazy">
+      </a>
       <div class="body">
         <div class="title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6080926" target="_blank">The Evolution of Technology Portfolios and Firm Profitability in the European Power Sector</a></div>
         <div class="meta">with <a class="author" href="https://www.anton-pichler.com/" target="_blank">Anton Pichler</a> · cited in the <a class="lnk" href="https://dserver.bundestag.de/btd/21/054/2105484.pdf" target="_blank">German Bundestag</a></div>
       </div>
     </div>
     <div class="entry">
+      <a class="paper-thumb" href="figures/first_mover_entry_timing_graph.png" target="_blank" rel="noopener noreferrer" aria-label="Open the first-mover figure at full size">
+        <img src="figures/first_mover_entry_timing_graph.png" alt="Scientific chart comparing solar and wind entry timing effects" loading="lazy">
+      </a>
       <div class="body">
         <div class="title">Is There a First-Mover Advantage in Renewable Development? Evidence from the US Power Sector</div>
         <div class="meta">with <a class="author" href="https://francoislafond.info/" target="_blank">François Lafond</a> and <a class="author" href="https://www.anton-pichler.com/" target="_blank">Anton Pichler</a></div>
@@ -209,7 +63,7 @@ h1 {
 
   <!-- Selected Talks -->
   <div class="section">
-    <div class="section-header">Selected Talks</div>
+    <h2 class="section-header">Selected Talks</h2>
     <div class="entry">
       <div class="col">2026</div><div class="body">
         <div class="title"><a href="https://www.rcea.world/events/forthcoming-events/the-2026-climate-and-energy-finance-conference" target="_blank">Climate and Energy Finance Conference</a></div>
@@ -232,7 +86,7 @@ h1 {
 
   <!-- Teaching -->
   <div class="section teaching">
-    <div class="section-header">Teaching</div>
+    <h2 class="section-header">Teaching</h2>
     <div class="entry">
       <div class="body">
         <div class="title">Introduction to Information Systems</div>
@@ -253,6 +107,8 @@ h1 {
     </div>
   </div>
 
+  </div>
+  <footer>Robin Fischer · WU Vienna</footer>
 </main>
 </body>
 </html>
